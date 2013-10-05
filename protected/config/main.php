@@ -11,26 +11,30 @@ return array(
 	'sourceLanguage'=>'pt_br',
 	'language' => 'pt_br',
 	'defaultController'=>'site',
-	'theme' => 'clubix-v1',
+	'theme' => 'classic',
 	
 	// preloading 'log' component
 	'preload'=>array('log','kint'),
 
 	// autoloading model and component classes
 	'import'=>array(
-		'application.models.*',
-		'application.components.*',
-		'application.modules.userGroups.models.*',
+            'application.models.*',
+            'application.components.*',
+            'application.modules.userGroups.models.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+		'userGroups'=>array(
+                    'accessCode'=>'@!pellada',
+                    'salt'=>'',
+                ),
+            
 		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'pelLada',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+                    'class'=>'system.gii.GiiModule',
+                    'password'=>'@!pellada',
+                    // If removed, Gii defaults to localhost only. Edit carefully to taste.
+                    'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		
 	),
@@ -38,9 +42,9 @@ return array(
 	// application components
 	'components'=>array(
 		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-                        'class'=>'userGroups.components.WebUserGroups',
+                    // enable cookie-based authentication
+                    'allowAutoLogin'=>true,
+                    'class'=>'userGroups.components.WebUserGroups',
 		),
               
 		// uncomment the following to enable URLs in path-format
@@ -60,11 +64,11 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost:3306;dbname=pelLada',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
+                    'connectionString' => 'mysql:host=localhost;dbname=pelLada',
+                    'emulatePrepare' => true,
+                    'username' => 'root',
+                    'password' => '123',
+                    'charset' => 'utf8',
 		),
 		
 		'errorHandler'=>array(

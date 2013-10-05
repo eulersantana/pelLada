@@ -11,7 +11,7 @@ return array(
 	'sourceLanguage'=>'pt_br',
 	'language' => 'pt_br',
 	'defaultController'=>'site',
-	'theme' => 'classic',
+	'theme' => 'clubix',
 	
 	// preloading 'log' component
 	'preload'=>array('log','kint'),

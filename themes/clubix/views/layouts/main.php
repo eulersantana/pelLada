@@ -248,6 +248,8 @@
         <!--Fim do Menu Principal-->
         <div class="clear"></div>
         <div class="container-slider">
+        <?php
+        /*
             <div class="container-slider-img">
                 <ul>
                     <li data-masterspeed="300" data-slotamount="10" data-transition="fade">
@@ -499,7 +501,9 @@
                     </li>
                 </ul>
                 <div class="tp-bannertimer"></div>
-            </div><script type="text/javascript">
+            </div>
+        <script type="text/javascript">
+         
             $(document).ready(function() {
                 $('.container-slider .container-slider-img').revolution(
                         {
@@ -549,7 +553,10 @@
                 <a class="right-slider-arrow" style="display: none;"><span></span></a>
                 <div class="container_12 content-slider"></div>
             </div>
+          */ 
+        ?>
             <div class="bg-audio-player container-1000 template-based-element-color template-based-element-border-color">
+        
 <?php
 /*
  <!--               <div class="container_12 container-audio-player component" data-component="audio-player-large" data-component-auto-play="1" style="top:-2px;">
@@ -806,7 +813,6 @@
         <div class="container-title-page">
             <div class="container_12">
                 <h1>SEJA BEM VINDO AO <span class="white"><?php echo Yii::app()->name ?></span></h1>
-                <?php echo $content; ?>
             </div>
         </div>
         <div class="container-960 content-page-home">

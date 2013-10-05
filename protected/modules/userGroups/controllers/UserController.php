@@ -429,7 +429,7 @@ class UserController extends Controller
 
 	public function actionLogin()
 	{
-                      $this->layout = 'login'; //added by Ivan
+                $this->layout = 'login'; 
 		$model=new UserGroupsUser('login');
 
 		// if it is ajax validation request
@@ -442,11 +442,11 @@ class UserController extends Controller
 		// collect user input data
 		if(isset($_POST['UserGroupsUser']))
 		{
-			$model->attributes=$_POST['UserGroupsUser'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login()) {
-				$this->redirect(Yii::app()->user->returnUrl);
-			}
+                    $model->attributes=$_POST['UserGroupsUser'];
+                    // validate user input and redirect to the previous page if valid
+                    if($model->validate() && $model->login()) {
+                            $this->redirect(Yii::app()->user->returnUrl);
+                    }
 		}
 
 		// display the login form

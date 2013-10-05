@@ -41,7 +41,7 @@
     </head>
     <body class="special-page">
         <div id="container">
-            <div id="logo"><center><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/Logo_Vivasmith_3.png" alt="<?= Yii::app()->name ?>" title="<?= Yii::app()->name ?>"></center></div>
+            <div id="logo"><?= Yii::app()->name; ?></div>
             <section id="login-box">
                 <div class="block-border">
                     <div class="block-header">

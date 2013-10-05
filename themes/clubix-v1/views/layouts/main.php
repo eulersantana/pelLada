@@ -68,7 +68,7 @@
             <div class="container_12">
                 <div class="grid_2 alpha">
                     <div class="logo">
-                        <?php echo CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . "/img/logo.png", 'PelLada', array()), "http://www.financas.develops6.com"); ?>
+                        <?php echo CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . "/img/logo.png", 'Logo '.Yii::app()->name, array()), Yii::app()->baseUrl); ?>
                     </div>
                 </div>
                 <div class="grid_2 push_8 omega social-media-container">
@@ -160,14 +160,20 @@
                 <div class="grid_2 search omega alpha container-search-top">
                     <form action="#" method="post">
                         <div class="input-bg">
-                            <input name="search" onblur="if (this.value == '') {
-                    this.value = this.defaultValue
-                }" onclick="if (this.value == this.defaultValue) {
-                    this.value = ''
-                }" type="text" value="Search...">
+<!--                            <input name="search" onblur="if (this.value == '') {
+                                this.value = this.defaultValue
+                               }" onclick="if (this.value == this.defaultValue) {
+                                    this.value = ''
+                               }" type="text" value="Search...">-->
+                            <?php 
+                                echo CHtml::textField("search", "", array("placeholder"=>"Buscar"))
+                            ?>
                         </div>
                         <div class="bg-submit-search template-based-element-background-color-hover">
-                            <input class="submit-button-search" id="submit-header-search" name="submit" type="submit" value="">
+                            <?php 
+//                                <input class="submit-button-search" id="submit-header-search" name="submit" type="submit" value="">
+                                  echo CHtml::submitButton("",array("class"=>"submit-button-search","id"=>"submit-header-search","name"=>"submit"));
+                            ?>
                         </div>
                         <div class="clear"></div>
                     </form>
@@ -246,7 +252,10 @@
                 <ul>
                     <li data-masterspeed="300" data-slotamount="10" data-transition="fade">
                         
-                        <img data-fullwidthcentering="on" src="themes/clubix-v1/img/slider-image-bg-1.jpg" alt="slider-img" class="slider-header-img">
+                        <?php 
+//                        <img data-fullwidthcentering="on" src="themes/clubix-v1/img/slider-image-bg-1.jpg" alt="slider-img" class="slider-header-img">                        
+                          echo CHtml::image(Yii::app()->theme->baseUrl.'/img/slider-image-bg-1.jpg',"Imagem slider ",array("class"=>"slider-header-img","data-fullwidthcentering"=>"on"));
+                        ?>
                         <div class="caption randomrotate" data-easing="easeOutExpo" data-speed="300" data-start="150" data-x="0" data-y="495">
                             <div class="title-event-slider" style="margin-top: 0">
                                 <h1 class="template-based-element-background-color-transparent">
@@ -261,14 +270,26 @@
                         <div class="grid_4 omega caption randomrotate" data-easing="easeOutExpo" data-speed="300" data-start="150" data-x="650" data-y="150">
                             <div class="information-block-container component" data-component="ticket-navigation">
                                 <div class="arrow-set">
-                                    <button class="right-arrow go-next"><img alt="information-arrow-right" src="themes/clubix-v1/img/arrow-next-event.png"></button> <button class="left-arrow go-prev"><img alt="information-arrow-left" src="img/arrow-prev-event.png"></button>
+                                    <?php
+//                                    <button class="right-arrow go-next">
+//                                      <img alt="information-arrow-right" src="themes/clubix-v1/img/arrow-next-event.png">
+//                                    </button> 
+//                                    <button class="left-arrow go-prev">
+//                                      <img alt="information-arrow-left" src="img/arrow-prev-event.png">
+//                                    </button>
+                                    echo CHtml::htmlButton(CHtml::image(Yii::app()->theme->baseUrl.'/img/arrow-next-event.png',"informação direita evento ",array()), array("class"=>"right-arrow go-next"));
+                                    echo CHtml::htmlButton(CHtml::image(Yii::app()->theme->baseUrl.'/img/arrow-prev-event.png',"informação esquerda evento ",array()), array("class"=>"left-arrow go-prev"));
+                                    ?>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="container-information">
                                     <ul>
                                         <li>
                                             <figure>
-                                                <img src="themes/clubix-v1/img/ultra-music-festival-min.jpg" alt="event-pic">
+                                                <?php 
+//                                                <img src="themes/clubix-v1/img/ultra-music-festival-min.jpg" alt="event-pic">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/ultra-music-festival-min.jpg',"event-pic",array());
+                                                ?>
                                             </figure>
                                             <div class="info">
                                                 <ul class="time-left">
@@ -295,11 +316,17 @@
                                                 </div>
                                                 <ul class="place-time-event-slider">
                                                     <li>
-                                                        <img alt="place" src="themes/clubix-v1/img/place-icon.png">
+                                                        <?php
+//                                                        <img alt="place" src="themes/clubix-v1/img/place-icon.png">
+                                                        echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon.png',"place",array());
+                                                        ?>
                                                         <p>New York</p>
                                                     </li>
                                                     <li>
-                                                        <img alt="time" src="themes/clubix-v1/img/time-icon.png">
+                                                        <?php
+//                                                        <img alt="time" src="themes/clubix-v1/img/time-icon.png">
+                                                        echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-icon.png',"time",array());
+                                                        ?>
                                                         <p>12:00 pm</p>
                                                     </li>
                                                 </ul>
@@ -307,7 +334,10 @@
                                         </li>
                                         <li style="display: none;">
                                             <figure>
-                                                <img src="themes/clubix-v1/img/fabulous-min.jpg" alt="event-pic">
+                                                <?php
+//                                                <img src="themes/clubix-v1/img/fabulous-min.jpg" alt="event-pic">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/fabulous-min.jpg',"event-pic",array());
+                                                ?>
                                             </figure>
                                             <div class="info">
                                                 <ul class="time-left">
@@ -520,6 +550,8 @@
                 <div class="container_12 content-slider"></div>
             </div>
             <div class="bg-audio-player container-1000 template-based-element-color template-based-element-border-color">
+<?php
+/*
  <!--               <div class="container_12 container-audio-player component" data-component="audio-player-large" data-component-auto-play="1" style="top:-2px;">
                     <div class="next-prev-song">
                         <button class="next-song"><img alt="next-song" src="themes/clubix-v1/img/next-song-icon.png"></button> <button class="prev-song"><img alt="prev-song" src="themes/clubix-v1/img/prev-song-icon.png"></button>
@@ -611,103 +643,154 @@
                         </div>
                     </div>
                 </div>-->
+ */
+ ?>
             </div>
             <div class="bg-albums-and-events template-based-element-border-color">
                 <ul class="ul-list-events-albums">
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/fabulous-large.jpg">
+                            <?php 
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/fabulous-large.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/fabulous-large.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/fabulous-large.jpg">
+                                <?php
+//                                echo '<img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/fabulous-large.jpg">';
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/fabulous-large.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/ultra-music-festival.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/ultra-music-festival.jpg">
+                             echo CHtml::image(Yii::app()->theme->baseUrl.'/img/ultra-music-festival.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/ultra-music-festival.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/ultra-music-festival.jpg">
+                                 echo CHtml::image(Yii::app()->theme->baseUrl.'/img/ultra-music-festival.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/this-is-it.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/this-is-it.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/this-is-it.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/this-is-it.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/this-is-it.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/this-is-it.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/demi-lovato.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/demi-lovato.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/demi-lovato.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="img/demi-lovato.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="img/demi-lovato.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/demi-lovato.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-5.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-5.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/event-5.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/event-5.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="themes/clubix-v1/img/event-5.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl . '/img/event-5.jpg', "fabulous", array("class" => "img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="events-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-6.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-6.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/event-6.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="img/event-6.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="img/event-6.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/event-6.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="flipping-albums-events container-flip-caption">
-                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-7.jpg">
+                            <?php
+//                            <img alt="fabulous" class="img-front-bg" src="themes/clubix-v1/img/event-7.jpg">
+                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/event-7.jpg',"fabulous",array("class"=>"img-front-bg"));
+                            ?>
                             <div class="caption">
-                                <img alt="fabulous" class="img-pink-bg" src="img/event-7.jpg">
+                                <?php
+//                                <img alt="fabulous" class="img-pink-bg" src="img/event-7.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/event-7.jpg',"fabulous",array("class"=>"img-pink-bg"));
+                                ?>
                                 <div class="bg-pink-flip template-based-element-background-color-transparent">
                                     <h1 class="title-flipp">Mamaia beach tornament</h1>
                                     <div class="under-line-flipp"></div>
                                     <p>Mauris iaculis porttitor posuere. Praesent id metus massa,
-                                        ut blandit odio. Proin quis tortor orci.</p><a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
+                                        ut blandit odio. Proin quis tortor orci.</p>
+                                    <a class="more-info-flipp" href="albums-single-page.html">Inscrever-me</a>
                                 </div>
                             </div>
                         </div>
@@ -722,11 +805,13 @@
         <div class="clear"></div>
         <div class="container-title-page">
             <div class="container_12">
-                <h1>SEJA BEM VINDO AO <span class="white">PelLada</span> </h1>
+                <h1>SEJA BEM VINDO AO <span class="white"><?php echo Yii::app()->name ?></span></h1>
             </div>
         </div>
         <div class="container-960 content-page-home">
             <div class="grid_12 container_12 alpha omega">
+<?php
+/*
 <!--                <ul class="features-01">
                     <li>
                         <img alt="make-events" class="container-img" src="img/make-events-image.jpg">
@@ -759,6 +844,8 @@
                             </div></a>
                     </li>
                 </ul>-->
+ */
+?>
                 <div class="grid_8 alpha">
                     <div class="posts">
                         <h1 class="underline-title">Latest <span>posts</span></h1>
@@ -769,29 +856,43 @@
                         <div class="posts-container">
                             <div class="post-container">
                                 <div class="left-content">
-                                    <img alt="post-img" class="post-img" src="themes/clubix-v1/img/pic-1-image.jpg">
-                                    <h1 class="title-tags">tags</h1><span class="tag"><a class="template-based-element-color-hover" href="#">web
-                                            design</a></span> <span class="tag"><a class="template-based-element-color-hover" href="#">life
-                                            style</a></span> <span class="tag"><a class="template-based-element-color-hover" href="#">another</a></span> <span class="tag"><a class="template-based-element-color-hover" href="#">god</a></span>
+                                    <?php
+//                                    <img alt="post-img" class="post-img" src="themes/clubix-v1/img/pic-1-image.jpg">
+                                    echo CHtml::image(Yii::app()->theme->baseUrl.'/img/pic-1-image.jpg',"post-img",array("class"=>"post-img"));
+                                    ?>
+                                    <h1 class="title-tags">tags</h1>
+                                    <span class="tag"><a class="template-based-element-color-hover" href="#">web design</a></span> 
+                                    <span class="tag"><a class="template-based-element-color-hover" href="#">life style</a></span>
+                                    <span class="tag"><a class="template-based-element-color-hover" href="#">another</a></span>
+                                    <span class="tag"><a class="template-based-element-color-hover" href="#">god</a></span>
                                     <span class="tag"><a class="template-based-element-color-hover" href="#">trance music</a></span>
                                 </div>
                                 <div class="right-content">
                                     <a class="title-post" href="blog-page-single.html">Here come
-                                        bloag title lorem ipsum dolor ? Dino ninoou can�t take this
+                                        bloag title lorem ipsum dolor ? Dino ninoou can't take this
                                         test because dorms afnt</a>
                                     <div class="clear"></div>
                                     <div class="info-post">
                                         <ul>
                                             <li>
-                                                <img alt="user" src="themes/clubix-v1/img/user-post-icon.png">
+                                                <?php
+//                                                <img alt="user" src="themes/clubix-v1/img/user-post-icon.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/user-post-icon.png',"user",array());
+                                                ?>
                                                 <p><a class="template-based-element-color-hover" href="#">Ses Vasile Daniel</a> in <a class="template-based-element-color-hover" href="#">developing</a></p>
                                             </li>
                                             <li>
-                                                <img alt="comment" src="themes/clubix-v1/img/comments-post-icon.png">
+                                                <?php
+//                                                <img alt="comment" src="themes/clubix-v1/img/comments-post-icon.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/comments-post-icon.png',"comentario",array());
+                                                ?>
                                                 <p><a class="template-based-element-color-hover" href="blog-page-single.html#comments">100 comments</a></p>
                                             </li>
                                             <li>
-                                                <img alt="time" src="themes/clubix-v1/img/time-post-icon.png">
+                                                <?php
+//                                                <img alt="time" src="themes/clubix-v1/img/time-post-icon.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-post-icon.png',"time",array());
+                                                ?>
                                                 <p><a class="template-based-element-color-hover" href="blog-page-single.html">21 Mai 2013</a></p>
                                             </li>
                                         </ul>
@@ -800,11 +901,14 @@
                                         auctor, mi quam vestibulum dolor, in iaculis ante nulla eu
                                         nisi. Integer molestie commodo euismod. Morbi pellentesque
                                         turpis diam, ac interdum erat rutrum et. Aliquam
-                                        dapibus</p><a class="read-more template-based-element-background-color" href="blog-page-single.html">Read more</a>
+                                        dapibus</p>
+                                    <a class="read-more template-based-element-background-color" href="blog-page-single.html">Read more</a>
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <div class="post-container">
+<?php 
+/*
+<!--                            <div class="post-container">
                                 <div class="left-content">
                                     <img alt="post-img" class="post-img" src="themes/clubix-v1/img/pic-2-image.jpg">
                                     <h1 class="title-tags">tags</h1><span class="tag"><a class="template-based-element-color-hover" href="#">web
@@ -914,7 +1018,9 @@
                                         dapibus</p><a class="read-more template-based-element-background-color" href="blog-page-single.html">Read more</a>
                                 </div>
                                 <div class="clear"></div>
-                            </div>
+                            </div>-->
+*/
+?>
                         </div>
                         <h1 class="underline-title">Latest <span>events</span></h1>
                         <div class="underline-bg">
@@ -925,24 +1031,35 @@
                     <ul class="latest-events home-latest-events">
                         <li class="home-latest-events-li">
                             <div class="flipping-albums-events container-flip-caption">
-                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+                                <?php
+//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+                                    echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-1-img.jpg',"latest-event",array("class"=>"img-latest-event template-based-element-border-color"));
+                                ?>
                                 <div class="black-sec-tornament">
-                                    <h1 class="title-latst-h1"><a href="#">Mamaia beach
-                                            tornament</a></h1>
+                                    <h1 class="title-latst-h1"><a href="#">Mamaia beach tornament</a></h1>
                                     <div class="underline-title-latest-events"></div>
                                     <ul class="info-latest-events">
                                         <li>
-                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                            <?php
+//                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
+                                            ?>
                                             <p>Vama Veche, Romania</p>
                                         </li>
                                         <li>
-                                            <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+                                            <?php
+//                                            <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+                                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/date-icon.png',"data",array());
+                                            ?>
                                             <p>19/12/2013</p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="back caption">
-                                    <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+                                    <?php
+//                                    <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+                                    echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-1-img.jpg',"latest-event",array("class"=>"img-latest-event template-based-element-border-color"));
+                                    ?>
                                     <div class="bg-black-flip">
                                         <h1 class="title-flipp">Mamaia beach tornament</h1>
                                         <div class="under-line-flipp"></div>
@@ -955,11 +1072,17 @@
                                             carades dacer.</p><a class="more-info-flipp template-based-element-background-color" href="#">Inscrever-me</a>
                                         <ul class="info-latest-events">
                                             <li>
-                                                <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                                <?php
+    //                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
+                                                ?>
                                                 <p>Vama Veche, Romania</p>
                                             </li>
                                             <li>
-                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+                                                <?php
+//                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-icon-2.png',"data",array());
+                                                ?>
                                                 <p>11:34 PM - 01:32 AM</p>
                                             </li>
                                         </ul>
@@ -969,18 +1092,27 @@
                         </li>
                         <li class="home-latest-events-li">
                             <div class="flipping-albums-events container-flip-caption">
-                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-6-img.jpg">
+                                <?php
+//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-6-img.jpg">
+                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-6-img.jpg',"latest-event",array("class"=>"img-latest-event template-border-color"));
+                                ?>
                                 <div class="black-sec-tornament">
                                     <h1 class="title-latst-h1"><a href="#">Mamaia beach
                                             tornament</a></h1>
                                     <div class="underline-title-latest-events"></div>
                                     <ul class="info-latest-events">
                                         <li>
-                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                            <?php
+//                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
+                                            ?>
                                             <p>Vama Veche, Romania</p>
                                         </li>
                                         <li>
-                                            <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+                                            <?php
+//                                                <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+                                            echo CHtml::image(Yii::app()->theme->baseUrl.'/img/date-icon.png',"data",array());
+                                            ?>
                                             <p>19/12/2013</p>
                                         </li>
                                     </ul>
@@ -999,11 +1131,17 @@
                                             carades dacer.</p><a class="more-info-flipp template-based-element-background-color" href="#">Inscrever-me</a>
                                         <ul class="info-latest-events">
                                             <li>
-                                                <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                                <?php
+//                                                <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
+                                                ?>
                                                 <p>Vama Veche, Romania</p>
                                             </li>
                                             <li>
-                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+                                                <?php
+//                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+                                                echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-icon-2.png',"time",array());
+                                                ?>
                                                 <p>11:34 PM - 01:32 AM</p>
                                             </li>
                                         </ul>
@@ -1014,6 +1152,8 @@
                     </ul>
                     <div class="clear"></div>
                 </div>
+<?php 
+/*
 <!--                <div class="grid_4 omega container-sidebar">
                     <ul class="widgets-ul">
                         <li>
@@ -1362,9 +1502,13 @@
                         </li>
                     </ul>
                 </div>-->
+ */
+?>
             </div>
             <div class="clear"></div>
         </div> 
+        <?php
+        /*
 <!--        <div class="panel templateColorSwitcherPanel">
             <div class="container-panel">
                 <div class="colors">
@@ -1389,6 +1533,8 @@
             </div>
             <div class="clear"></div>
         </div> -->
+         */
+        ?>
         <script src="template-color-switcher/scripts/templateColorSwitcher.js" type="text/javascript"></script>
         <script src="template-color-switcher/scripts/colorSwitcherPanel.js" type="text/javascript"></script>
         <link href="template-color-switcher/css/style.css" rel="stylesheet" type="text/css">
@@ -1406,7 +1552,9 @@
             <div class="container_12">
                 <ul class="footer-top-itm">
                     <li class="grid_3">
-                        <a class="logo-footer" href="index.html"><img alt="Clubix Logo" src="img/logo.png"></a>
+                        <a class="logo-footer" href="index.html">
+                            <?php echo CHtml::image(Yii::app()->theme->baseUrl.'/img/logo.png',"Logo ".Yii::app()->name) ?>
+                        </a>
                         <p class="italic">Lorem ipsum ex vix illud nonummy, novum tation et
                             his. At vix scriptaset patrioque scribentur, at pro fugit erts</p>
                         <p class="italic">Srterem molestiae, sed et vivendo ali Lorem ipsum
@@ -1444,35 +1592,7 @@
                         </ul>
                     </li>
                     <li class="grid_3">
-                        <h1 class="footer-top-title">flickr</h1>
-                        <ul class="flickr-list-footer-top">
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                        </ul>
-                        <ul class="flickr-list-footer-top">
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img alt="flickr" src="themes/clubix-v1/img/flickr-img.png"></a>
-                            </li>
-                        </ul>
+                        
                     </li>
                 </ul>
             </div>

@@ -23,15 +23,6 @@ return array(
 		'application.modules.userGroups.models.*',
 	),
 
-	// preloading 'log' component
-	'preload'=>array('log'),
-
-	// autoloading model and component classes
-	'import'=>array(
-		'application.models.*',
-		'application.components.*',
-	),
-
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		
@@ -49,7 +40,9 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+                        'class'=>'userGroups.components.WebUserGroups',
 		),
+              
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
@@ -67,7 +60,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=pelLada',
+			'connectionString' => 'mysql:host=localhost:3306;dbname=pelLada',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
@@ -99,6 +92,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'euler-m.d@hotmail.com',
 	),
 );

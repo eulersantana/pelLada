@@ -70,3 +70,63 @@ REQUEST_URI=/PelLada/
 in /opt/lampp/htdocs/PelLada/themes/clubix-v1/views/layouts/main.php (248)
 in /opt/lampp/htdocs/PelLada/protected/views/layouts/column1.php (6)
 in /opt/lampp/htdocs/PelLada/protected/controllers/SiteController.php (32)
+2013/10/05 06:37:09 [error] [exception.CException] exception 'CException' with message 'O alias "ext.Kint.Kint" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /opt/lampp/htdocs/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /opt/lampp/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.Kint.Kint', true)
+#1 /opt/lampp/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /opt/lampp/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('kint')
+#3 /opt/lampp/htdocs/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /opt/lampp/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/PelLada/index.php(13): YiiBase::createWebApplication('/opt/lampp/htdo...')
+#7 {main}
+REQUEST_URI=/PelLada/
+---
+2013/10/05 06:37:40 [error] [exception.CException] exception 'CException' with message 'O alias "ext.Kint.Kint" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /opt/lampp/htdocs/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /opt/lampp/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.Kint.Kint', true)
+#1 /opt/lampp/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /opt/lampp/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('kint')
+#3 /opt/lampp/htdocs/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /opt/lampp/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/PelLada/index.php(13): YiiBase::createWebApplication('/opt/lampp/htdo...')
+#7 {main}
+REQUEST_URI=/PelLada/
+---
+2013/10/05 06:37:42 [error] [exception.CException] exception 'CException' with message 'O alias "ext.Kint.Kint" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /opt/lampp/htdocs/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /opt/lampp/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.Kint.Kint', true)
+#1 /opt/lampp/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /opt/lampp/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('kint')
+#3 /opt/lampp/htdocs/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /opt/lampp/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/PelLada/index.php(13): YiiBase::createWebApplication('/opt/lampp/htdo...')
+#7 {main}
+REQUEST_URI=/PelLada/
+---
+2013/10/05 06:38:34 [error] [exception.CException] exception 'CException' with message 'O alias "ext.Kint.Kint" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /opt/lampp/htdocs/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /opt/lampp/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.Kint.Kint', true)
+#1 /opt/lampp/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /opt/lampp/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('kint')
+#3 /opt/lampp/htdocs/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /opt/lampp/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/PelLada/index.php(13): YiiBase::createWebApplication('/opt/lampp/htdo...')
+#7 {main}
+REQUEST_URI=/PelLada/
+---
+2013/10/05 06:39:19 [error] [exception.CException] exception 'CException' with message 'O alias "ext.Kint" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in /opt/lampp/htdocs/yii/framework/YiiBase.php:322
+Stack trace:
+#0 /opt/lampp/htdocs/yii/framework/YiiBase.php(196): YiiBase::import('ext.Kint', true)
+#1 /opt/lampp/htdocs/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /opt/lampp/htdocs/yii/framework/base/CModule.php(523): CModule->getComponent('kint')
+#3 /opt/lampp/htdocs/yii/framework/base/CApplication.php(163): CModule->preloadComponents()
+#4 /opt/lampp/htdocs/yii/framework/YiiBase.php(125): CApplication->__construct('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/PelLada/index.php(13): YiiBase::createWebApplication('/opt/lampp/htdo...')
+#7 {main}
+REQUEST_URI=/PelLada/
+---

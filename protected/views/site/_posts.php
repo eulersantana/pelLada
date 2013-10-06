@@ -11,7 +11,7 @@
                     <div class="post-container">
                         <div class="left-content">
                             <?php
-//                                    <img alt="post-img" class="post-img" src="themes/clubix-v1/img/pic-1-image.jpg">
+//                                    <img alt="post-img" class="post-img" src="themes/clubix/img/pic-1-image.jpg">
                             echo CHtml::image(Yii::app()->theme->baseUrl.'/img/pic-1-image.jpg',"post-img",array("class"=>"post-img"));
                             ?>
                             <h1 class="title-tags">tags</h1>
@@ -30,21 +30,21 @@
                                 <ul>
                                     <li>
                                         <?php
-//                                                <img alt="user" src="themes/clubix-v1/img/user-post-icon.png">
+//                                                <img alt="user" src="themes/clubix/img/user-post-icon.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/user-post-icon.png',"user",array());
                                         ?>
                                         <p><a class="template-based-element-color-hover" href="#">Ses Vasile Daniel</a> in <a class="template-based-element-color-hover" href="#">developing</a></p>
                                     </li>
                                     <li>
                                         <?php
-//                                                <img alt="comment" src="themes/clubix-v1/img/comments-post-icon.png">
+//                                                <img alt="comment" src="themes/clubix/img/comments-post-icon.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/comments-post-icon.png',"comentario",array());
                                         ?>
                                         <p><a class="template-based-element-color-hover" href="blog-page-single.html#comments">100 comments</a></p>
                                     </li>
                                     <li>
                                         <?php
-//                                                <img alt="time" src="themes/clubix-v1/img/time-post-icon.png">
+//                                                <img alt="time" src="themes/clubix/img/time-post-icon.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-post-icon.png',"time",array());
                                         ?>
                                         <p><a class="template-based-element-color-hover" href="blog-page-single.html">21 Mai 2013</a></p>
@@ -71,7 +71,7 @@
                 <li class="home-latest-events-li">
                     <div class="flipping-albums-events container-flip-caption">
                         <?php
-//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix/img/tournament-1-img.jpg">
                             echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-1-img.jpg',"latest-event",array("class"=>"img-latest-event template-based-element-border-color"));
                         ?>
                         <div class="black-sec-tornament">
@@ -80,14 +80,14 @@
                             <ul class="info-latest-events">
                                 <li>
                                     <?php
-//                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+//                                            <img alt="place" src="themes/clubix/img/place-icon-2.png">
                                     echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
                                     ?>
                                     <p>Vama Veche, Romania</p>
                                 </li>
                                 <li>
                                     <?php
-//                                            <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+//                                            <img alt="date" src="themes/clubix/img/date-icon.png">
                                     echo CHtml::image(Yii::app()->theme->baseUrl.'/img/date-icon.png',"data",array());
                                     ?>
                                     <p>19/12/2013</p>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="back caption">
                             <?php
-//                                    <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-1-img.jpg">
+//                                    <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix/img/tournament-1-img.jpg">
                             echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-1-img.jpg',"latest-event",array("class"=>"img-latest-event template-based-element-border-color"));
                             ?>
                             <div class="bg-black-flip">
@@ -112,14 +112,14 @@
                                 <ul class="info-latest-events">
                                     <li>
                                         <?php
-//                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+//                                            <img alt="place" src="themes/clubix/img/place-icon-2.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
                                         ?>
                                         <p>Vama Veche, Romania</p>
                                     </li>
                                     <li>
                                         <?php
-//                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+//                                                <img alt="date" src="themes/clubix/img/time-icon-2.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-icon-2.png',"data",array());
                                         ?>
                                         <p>11:34 PM - 01:32 AM</p>
@@ -132,7 +132,7 @@
                 <li class="home-latest-events-li">
                     <div class="flipping-albums-events container-flip-caption">
                         <?php
-//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-6-img.jpg">
+//                                <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix/img/tournament-6-img.jpg">
                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/tournament-6-img.jpg',"latest-event",array("class"=>"img-latest-event template-border-color"));
                         ?>
                         <div class="black-sec-tornament">
@@ -142,14 +142,14 @@
                             <ul class="info-latest-events">
                                 <li>
                                     <?php
-//                                            <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+//                                            <img alt="place" src="themes/clubix/img/place-icon-2.png">
                                     echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
                                     ?>
                                     <p>Vama Veche, Romania</p>
                                 </li>
                                 <li>
                                     <?php
-//                                                <img alt="date" src="themes/clubix-v1/img/date-icon.png">
+//                                                <img alt="date" src="themes/clubix/img/date-icon.png">
                                     echo CHtml::image(Yii::app()->theme->baseUrl.'/img/date-icon.png',"data",array());
                                     ?>
                                     <p>19/12/2013</p>
@@ -157,7 +157,7 @@
                             </ul>
                         </div>
                         <div class="back caption">
-                            <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix-v1/img/tournament-6-img.jpg">
+                            <img alt="latest-event" class="img-latest-event template-based-element-border-color" src="themes/clubix/img/tournament-6-img.jpg">
                             <div class="bg-black-flip">
                                 <h1 class="title-flipp">Mamaia beach tornament</h1>
                                 <div class="under-line-flipp"></div>
@@ -171,14 +171,14 @@
                                 <ul class="info-latest-events">
                                     <li>
                                         <?php
-//                                                <img alt="place" src="themes/clubix-v1/img/place-icon-2.png">
+//                                                <img alt="place" src="themes/clubix/img/place-icon-2.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/place-icon-2.png',"place",array());
                                         ?>
                                         <p>Vama Veche, Romania</p>
                                     </li>
                                     <li>
                                         <?php
-//                                                <img alt="date" src="themes/clubix-v1/img/time-icon-2.png">
+//                                                <img alt="date" src="themes/clubix/img/time-icon-2.png">
                                         echo CHtml::image(Yii::app()->theme->baseUrl.'/img/time-icon-2.png',"time",array());
                                         ?>
                                         <p>11:34 PM - 01:32 AM</p>

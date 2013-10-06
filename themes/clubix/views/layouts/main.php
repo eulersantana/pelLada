@@ -28,7 +28,7 @@
 
         <!-- Styles and JavaScript-->
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/componnet.js'); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/component.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/application.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/easy-filter.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/jplayer/jquery.jplayer.min.js'); ?>
@@ -250,10 +250,10 @@
         <section id="conteudo">
             <?php echo $content; ?>
         </section>
-        <script src="template-color-switcher/scripts/templateColorSwitcher.js" type="text/javascript"></script>
-        <script src="template-color-switcher/scripts/colorSwitcherPanel.js" type="text/javascript"></script>
-        <link href="template-color-switcher/css/style.css" rel="stylesheet" type="text/css">
-        <link href="template-color-switcher/css/adaptive.css" rel="stylesheet" type="text/css">
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/template-color-switcher/scripts/templateColorSwitcher.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/template-color-switcher/scripts/colorSwitcherPanel.js'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/template-color-switcher/css/style.css'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/template-color-switcher/css/adaptive.css'); ?>
         <script type="text/javascript">
             $(document).ready(function() {
                 TemplateColorSwitcher.Init();

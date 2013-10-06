@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Clubix</title>
+        <title><?php echo Yii::app()->name; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript">
             //<![CDATA[
@@ -84,7 +84,14 @@
                                 <a class="facebook-header" href="http://www.tumblr.com"></a>
                             </li>
                             <li class="template-based-element-background-color-hover">
-                                <a class="vimeo-header" href="http://www.vimeo.com"></a>
+                                <?php 
+                                if(Yii::app()->user->isGuest){
+                                    echo CHtml::link("", Yii::app()->baseUrl."/userGroups", array("class"=>"user_login")); 
+                                }
+                                else{
+                                    echo CHtml::link("", Yii::app()->baseUrl."/userGroups/user/logout", array("class"=>"user_logout")); 
+                                }
+                                ?>
                             </li>
                         </ul>
                         <div class="clear"></div>
@@ -101,6 +108,8 @@
                         <li>
                             <a href="index.html" class="selected">Home</a>
                         </li>
+                        <?php if(!Yii::app()->user->isGuest){ 
+                            if(Yii::app()->user->groupName == "root"){ ?>
                         <li>
                             <a href="blog-page.html">Blog</a>
                             <ul class="sub-menu-header">
@@ -138,6 +147,7 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php }else{  ?>
                         <li>
                             <a href="elements.html">Template Information</a>
                             <ul class="sub-menu-header">
@@ -152,9 +162,12 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php }
+                        
+                            } ?>
                         <li>
                             <a href="contact.html">Contact</a>
-                        </li>
+                        </li>                        
                     </ul>
                 </div>
                 <div class="grid_2 search omega alpha container-search-top">

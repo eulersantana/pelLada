@@ -502,7 +502,7 @@ class UserController extends Controller
 			Yii::app()->request->cookies['success'] = new CHttpCookie('success', $message);
 		}
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->baseUrl . '/userGroups');
+		$this->redirect(Yii::app()->baseUrl);
 	}
 
 	/**

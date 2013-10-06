@@ -210,3 +210,5 @@ ul.list-simple-2 li a.bif-list{background:url(../img/bif-list.png) no-repeat lef
 .grid_user_info ul.features-01 li:hover .feature{margin-top:15px;}
 .grid_user_info ul.features-01 li .f_image{position: relative; top: 100px; z-index: 0;}
 .grid_user_info ul.features-01 li .feature{position: relative; top: -120px; z-index: 2;}
+a.user_login{background:url(../img/user-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}
+a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}

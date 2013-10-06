@@ -1,30 +1,20 @@
 <?php
 /* @var $this EstabelecimentoController */
 /* @var $model Estabelecimento */
-
-$this->breadcrumbs=array(
-	'Estabelecimentos'=>array('index'),
-	$model->id,
-);
-
-$this->menu=array(
-	array('label'=>'List Estabelecimento', 'url'=>array('index')),
-	array('label'=>'Create Estabelecimento', 'url'=>array('create')),
-	array('label'=>'Update Estabelecimento', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Estabelecimento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Estabelecimento', 'url'=>array('admin')),
-);
 ?>
+<div class="container_12 p1">
 
-<h1>View Estabelecimento #<?php echo $model->id; ?></h1>
+    <h1>Estabelecimento #<?php echo $model->id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'nome',
-		'endereco',
-		'telefone',
-		'proprietario',
-	),
-)); ?>
+    <?php $this->widget('zii.widgets.CDetailView', array(
+            'data'=>$model,
+            'attributes'=>array(
+                    'id',
+                    'nome',
+                    'endereco',
+                    'telefone',
+                    'proprietario',
+            ),
+    )); ?>
+    
+</div>

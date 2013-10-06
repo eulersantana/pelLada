@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title><?php echo Yii::app()->name; ?></title>
+        <title><?php echo $this->pageTitle ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript">
             //<![CDATA[
@@ -174,7 +174,7 @@
                         
                             } ?>
                         <li>
-                            <a href="contact.html">Contato</a>
+                            <a href="<?php echo Yii::app()->baseUrl."/site/contact"; ?>">Contato</a>
                         </li>                        
                     </ul>
                 </div>

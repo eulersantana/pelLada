@@ -106,46 +106,54 @@
                 <div class="grid_10 alpha">
                     <ul class="menu">
                         <li>
-                            <a href="index.html" class="selected">Home</a>
+                            <?php echo CHtml::link("Home",Yii::app()->baseUrl,array("class"=>(!isSet($this->selecionado)) ? "selected" : "")); ?>
                         </li>
                         <?php if(!Yii::app()->user->isGuest){ 
                             if(Yii::app()->user->groupName == "root"){ ?>
                         <li>
-                            <a href="blog-page.html">Blog</a>
+                            <?php echo CHtml::link("Brinde",Yii::app()->baseUrl."/brinde",array("class"=>(isSet($this->selecionado) && $this->selecionado == "brinde") ? "selected" : "")); ?>
                             <ul class="sub-menu-header">
                                 <li>
-                                    <a class="template-based-element-background-hover" href="blog-page.html">Blog Posts</a>
+                                    <?php echo CHtml::link("Adicionar Brinde",Yii::app()->baseUrl."/brinde/create",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                                 <li>
-                                    <a class="template-based-element-background-hover" href="blog-page-single.html">Blog Post</a>
+                                    <?php echo CHtml::link("Gerenciar Brinde",Yii::app()->baseUrl."/brinde/admin",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                                 <li>
-                                    <a class="template-based-element-background-hover" href="blog-page-single-carousel.html">Blog Post Carousel</a>
+                                    <?php echo CHtml::link("Listar Brinde",Yii::app()->baseUrl."/brinde",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="events-page.html">Page List</a>
+                            <?php echo CHtml::link("Evento",Yii::app()->baseUrl."/evento",array("class"=>(isSet($this->selecionado) && $this->selecionado == "evento") ? "selected" : "")); ?>
                             <ul class="sub-menu-header">
                                 <li>
-                                    <a class="template-based-element-background-hover" href="albums-page.html">Albums</a>
+                                    <?php echo CHtml::link("Adicionar Evento",Yii::app()->baseUrl."/evento/create",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                                 <li>
-                                    <a class="template-based-element-background-hover" href="events-single-page.html">Event Page</a>
+                                    <?php echo CHtml::link("Gerenciar Evento",Yii::app()->baseUrl."/evento/admin",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                                 <li>
-                                    <a class="template-based-element-background-hover" href="events-page.html">Events</a>
-                                </li>
-                                <li>
-                                    <a class="template-based-element-background-hover" href="events-page-2.html">Events 2</a>
-                                </li>
-                                <li>
-                                    <a class="template-based-element-background-hover" href="photos-page.html">Photos</a>
-                                </li>
-                                <li>
-                                    <a class="template-based-element-background-hover" href="videos-page.html">Videos</a>
+                                    <?php echo CHtml::link("Listar Evento",Yii::app()->baseUrl."/evento",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                             </ul>
+                        </li>
+                        <li>
+                            <?php echo CHtml::link("Promoção",Yii::app()->baseUrl."/promocao",array("class"=>(isSet($this->selecionado) && $this->selecionado == "promocao") ? "selected" : "")); ?>
+                            <ul class="sub-menu-header">
+                                <li>
+                                    <?php echo CHtml::link("Adicionar Promoção",Yii::app()->baseUrl."/promocao/create",array("class"=>"template-based-element-background-hover")); ?>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Gerenciar Promoção",Yii::app()->baseUrl."/promocao/admin",array("class"=>"template-based-element-background-hover")); ?>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Listar Promoção",Yii::app()->baseUrl."/promocao",array("class"=>"template-based-element-background-hover")); ?>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <?php echo CHtml::link("Usuário",Yii::app()->baseUrl."/userGroups/user",array("class"=>(isSet($this->selecionado) && $this->selecionado == "usuario") ? "selected" : "")); ?>
                         </li>
                         <?php }else{  ?>
                         <li>
@@ -166,7 +174,7 @@
                         
                             } ?>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="contact.html">Contato</a>
                         </li>                        
                     </ul>
                 </div>

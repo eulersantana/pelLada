@@ -2,15 +2,8 @@
 /* @var $this EventoController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Eventos',
-);
-
-$this->menu=array(
-	array('label'=>'Create Evento', 'url'=>array('create')),
-	array('label'=>'Manage Evento', 'url'=>array('admin')),
-);
 ?>
+<div class="container_12 p1">
 
 <h1>Eventos</h1>
 
@@ -18,3 +11,5 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+
+</div>

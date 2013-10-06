@@ -1,17 +1,6 @@
 <?php
 /* @var $this PromocaoController */
 /* @var $model Promocao */
-
-$this->breadcrumbs=array(
-	'Promocaos'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Promocao', 'url'=>array('index')),
-	array('label'=>'Create Promocao', 'url'=>array('create')),
-);
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -26,7 +15,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Promocaos</h1>
+<div class="container_12 p1">
+
+<h1>Manage Promoções</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -59,3 +50,5 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+
+</div>

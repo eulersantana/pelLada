@@ -3,6 +3,7 @@
 class UserController extends Controller
 {
         public $title_action = "User group";
+        public $selecionado = "usuario"; //Variável para saber qual página foi selecionada -> usado no menu 
 	/**
 	 * @var mixed tooltip for the permission menagement
 	 */

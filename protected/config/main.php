@@ -68,7 +68,7 @@ return array(
                     'connectionString' => 'mysql:host=localhost;dbname=pelLada',
                     'emulatePrepare' => true,
                     'username' => 'root',
-                    'password' => '123',
+                    'password' => '',
                     'charset' => 'utf8',
 		),
 		

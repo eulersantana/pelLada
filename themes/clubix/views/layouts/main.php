@@ -64,6 +64,7 @@
       <![endif]-->
 </head>
     <body>
+        
         <div class="bg-header">
             <div class="container_12">
                 <div class="grid_2 alpha">
@@ -814,7 +815,9 @@
             <div class="container_12">
                 <h1>SEJA BEM VINDO AO <span class="white"><?php echo Yii::app()->name ?></span></h1>
             </div>
+           
         </div>
+        
         <div class="container-960 content-page-home">
             <div class="grid_12 container_12 alpha omega">
 <?php
@@ -853,6 +856,7 @@
                 </ul>-->
  */
 ?>
+                 <?php echo $content ?>
                 <div class="grid_8 alpha">
                     <div class="posts">
                         <h1 class="underline-title">Latest <span>posts</span></h1>

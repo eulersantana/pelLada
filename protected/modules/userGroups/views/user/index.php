@@ -1,3 +1,5 @@
+<div class="container_12 p1">
+
 <?php
 $this->breadcrumbs=array(
 	Yii::t('userGroupsModule.general','User List'),
@@ -56,4 +58,6 @@ $this->breadcrumbs=array(
 			*/
 		),
 	)); ?>
+</div>
+    
 </div>

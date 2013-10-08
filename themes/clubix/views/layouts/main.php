@@ -27,73 +27,70 @@
         </script>
 
         <!-- Styles and JavaScript-->
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/component.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/application.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/easy-filter.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/jplayer/jquery.jplayer.min.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/accordion-tab.js'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/tabbed-interface.js'); ?>
-<?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/prettyPhoto/css/prettyPhoto.css'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/prettyPhoto/js/jquery.prettyPhoto.js'); ?>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            Application.init();
-            Component.Init();
-            EasyFiler.Init();
-        });
-    </script> 
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/rs-plugin/js/jquery.themepunch.revolution.min.js'); ?>
-<?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/rs-plugin/css/settings.css'); ?>
-<?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/style.css'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nicescroll.min.js'); ?>
-    <script>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/component.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/application.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/easy-filter.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/jplayer/jquery.jplayer.min.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/accordion-tab.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/tabbed-interface.js'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/prettyPhoto/css/prettyPhoto.css'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/prettyPhoto/js/jquery.prettyPhoto.js'); ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                Application.init();
+                Component.Init();
+                EasyFiler.Init();
+            });
+        </script> 
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/rs-plugin/js/jquery.themepunch.revolution.min.js'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/rs-plugin/css/settings.css'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/style.css'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nicescroll.min.js'); ?>
+        <script>
 
-        $(document).ready(function() {
+            $(document).ready(function() {
 
-            var nice = $(".block-play-list").niceScroll();  // The document page (body)
+                var nice = $(".block-play-list").niceScroll();  // The document page (body)
 
-        });
-    </script>
+            });
+        </script>
 
-    <!--[if IE 8]>
-
-        <link rel="stylesheet" href="css/css/ie-8.css">
-        <script type="text/javascript" src="js/ie-fix.js"></script>
-
-      <![endif]-->
-</head>
+        <!--[if IE 8]>
+    
+            <link rel="stylesheet" href="css/css/ie-8.css">
+            <script type="text/javascript" src="js/ie-fix.js"></script>
+    
+          <![endif]-->
+    </head>
     <body>
-        
+
         <div class="bg-header">
             <div class="container_12">
                 <div class="grid_2 alpha">
                     <div class="logo">
-                        <?php echo CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . "/img/logo.png", 'Logo '.Yii::app()->name, array()), Yii::app()->baseUrl); ?>
+                        <?php echo CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . "/img/logo.png", 'Logo ' . Yii::app()->name, array()), Yii::app()->baseUrl); ?>
                     </div>
                 </div>
-                <div class="grid_2 push_8 omega social-media-container">
+                <div class="grid_4 push_6 omega social-media-container">
                     <div class="social-header-container">
                         <ul>
-                            <li class="template-based-element-background-color-hover">
-                                <a class="twitter-header" href="http://www.twitter.com"></a>
+                            <?php
+                            if (Yii::app()->user->isGuest) {
+                            ?>
+                            <li class="template-based-element-background-color-hover user_info">
+                            <?php echo CHtml::link("", Yii::app()->baseUrl . "/userGroups", array("class" => "user_login")); ?>
+                            </li>
+                            <?php
+                            } else {
+                            ?>    
+                            <li class="template-based-element-background-color-hover user_info">
+                                Olá <?php echo Yii::app()->user->name; ?>
                             </li>
                             <li class="template-based-element-background-color-hover">
-                                <a class="tumblr-header" href="http://www.tumblr.com"></a>
+                            <?php echo CHtml::link("", Yii::app()->baseUrl . "/userGroups/user/logout", array("class" => "user_logout")); ?>
                             </li>
-                            <li class="template-based-element-background-color-hover">
-                                <a class="facebook-header" href="http://www.tumblr.com"></a>
-                            </li>
-                            <li class="template-based-element-background-color-hover">
-                                <?php 
-                                if(Yii::app()->user->isGuest){
-                                    echo CHtml::link("", Yii::app()->baseUrl."/userGroups", array("class"=>"user_login")); 
-                                }
-                                else{
-                                    echo CHtml::link("", Yii::app()->baseUrl."/userGroups/user/logout", array("class"=>"user_logout")); 
-                                }
-                                ?>
-                            </li>
+                            <?php } ?>
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -107,75 +104,76 @@
                 <div class="grid_10 alpha">
                     <ul class="menu">
                         <li>
-                            <?php echo CHtml::link("Home",Yii::app()->baseUrl,array("class"=>(!isSet($this->selecionado)) ? "selected" : "")); ?>
+                            <?php echo CHtml::link("Home", Yii::app()->baseUrl, array("class" => (!isSet($this->selecionado)) ? "selected" : "")); ?>
                         </li>
-                        <?php if(!Yii::app()->user->isGuest){ 
-                            if(Yii::app()->user->groupName == "root"){ ?>
+                        <?php if (!Yii::app()->user->isGuest) {
+                            if (Yii::app()->user->groupName == "root") {
+                                ?>
+                                <li>
+                                    <?php echo CHtml::link("Brinde", Yii::app()->baseUrl . "/brinde", array("class" => (isSet($this->selecionado) && $this->selecionado == "brinde") ? "selected" : "")); ?>
+                                    <ul class="sub-menu-header">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Brinde", Yii::app()->baseUrl . "/brinde/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Brinde", Yii::app()->baseUrl . "/brinde/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Brinde", Yii::app()->baseUrl . "/brinde", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Evento", Yii::app()->baseUrl . "/evento", array("class" => (isSet($this->selecionado) && $this->selecionado == "evento") ? "selected" : "")); ?>
+                                    <ul class="sub-menu-header">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Evento", Yii::app()->baseUrl . "/evento/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Evento", Yii::app()->baseUrl . "/evento/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Evento", Yii::app()->baseUrl . "/evento", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Promoção", Yii::app()->baseUrl . "/promocao", array("class" => (isSet($this->selecionado) && $this->selecionado == "promocao") ? "selected" : "")); ?>
+                                    <ul class="sub-menu-header">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Promoção", Yii::app()->baseUrl . "/promocao/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Promoção", Yii::app()->baseUrl . "/promocao/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Promoção", Yii::app()->baseUrl . "/promocao", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Usuário", Yii::app()->baseUrl . "/userGroups/user", array("class" => (isSet($this->selecionado) && $this->selecionado == "usuario") ? "selected" : "")); ?>
+                                </li>
+                            <?php } else { ?>
+                                <li>
+                                    <a href="elements.html">Template Information</a>
+                                    <ul class="sub-menu-header">
+                                        <li>
+                                            <a class="template-based-element-background-hover" href="elements.html">Elements</a>
+                                        </li>
+                                        <li>
+                                            <a class="template-based-element-background-hover" href="typography.html">Typography</a>
+                                        </li>
+                                        <li>
+                                            <a class="template-based-element-background-hover" href="error.html">Error Page</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php }
+                        }
+                        ?>
                         <li>
-                            <?php echo CHtml::link("Brinde",Yii::app()->baseUrl."/brinde",array("class"=>(isSet($this->selecionado) && $this->selecionado == "brinde") ? "selected" : "")); ?>
-                            <ul class="sub-menu-header">
-                                <li>
-                                    <?php echo CHtml::link("Adicionar Brinde",Yii::app()->baseUrl."/brinde/create",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Gerenciar Brinde",Yii::app()->baseUrl."/brinde/admin",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Listar Brinde",Yii::app()->baseUrl."/brinde",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <?php echo CHtml::link("Evento",Yii::app()->baseUrl."/evento",array("class"=>(isSet($this->selecionado) && $this->selecionado == "evento") ? "selected" : "")); ?>
-                            <ul class="sub-menu-header">
-                                <li>
-                                    <?php echo CHtml::link("Adicionar Evento",Yii::app()->baseUrl."/evento/create",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Gerenciar Evento",Yii::app()->baseUrl."/evento/admin",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Listar Evento",Yii::app()->baseUrl."/evento",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <?php echo CHtml::link("Promoção",Yii::app()->baseUrl."/promocao",array("class"=>(isSet($this->selecionado) && $this->selecionado == "promocao") ? "selected" : "")); ?>
-                            <ul class="sub-menu-header">
-                                <li>
-                                    <?php echo CHtml::link("Adicionar Promoção",Yii::app()->baseUrl."/promocao/create",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Gerenciar Promoção",Yii::app()->baseUrl."/promocao/admin",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                                <li>
-                                    <?php echo CHtml::link("Listar Promoção",Yii::app()->baseUrl."/promocao",array("class"=>"template-based-element-background-hover")); ?>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <?php echo CHtml::link("Usuário",Yii::app()->baseUrl."/userGroups/user",array("class"=>(isSet($this->selecionado) && $this->selecionado == "usuario") ? "selected" : "")); ?>
-                        </li>
-                        <?php }else{  ?>
-                        <li>
-                            <a href="elements.html">Template Information</a>
-                            <ul class="sub-menu-header">
-                                <li>
-                                    <a class="template-based-element-background-hover" href="elements.html">Elements</a>
-                                </li>
-                                <li>
-                                    <a class="template-based-element-background-hover" href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a class="template-based-element-background-hover" href="error.html">Error Page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <?php }
-                        
-                            } ?>
-                        <li>
-                            <a href="<?php echo Yii::app()->baseUrl."/site/contact"; ?>">Contato</a>
+                            <a href="<?php echo Yii::app()->baseUrl . "/site/contact"; ?>">Contato</a>
                         </li>                        
                     </ul>
                 </div>
@@ -187,14 +185,14 @@
                                }" onclick="if (this.value == this.defaultValue) {
                                     this.value = ''
                                }" type="text" value="Search...">-->
-                            <?php 
-                                echo CHtml::textField("search", "", array("placeholder"=>"Buscar"))
+                            <?php
+                            echo CHtml::textField("search", "", array("placeholder" => "Buscar"))
                             ?>
                         </div>
                         <div class="bg-submit-search template-based-element-background-color-hover">
-                            <?php 
+                            <?php
 //                                <input class="submit-button-search" id="submit-header-search" name="submit" type="submit" value="">
-                                  echo CHtml::submitButton("",array("class"=>"submit-button-search","id"=>"submit-header-search","name"=>"submit"));
+                            echo CHtml::submitButton("", array("class" => "submit-button-search", "id" => "submit-header-search", "name" => "submit"));
                             ?>
                         </div>
                         <div class="clear"></div>
@@ -290,7 +288,7 @@
                 <ul class="footer-top-itm">
                     <li class="grid_3">
                         <a class="logo-footer" href="index.html">
-                            <?php echo CHtml::image(Yii::app()->theme->baseUrl.'/img/logo.png',"Logo ".Yii::app()->name) ?>
+                            <?php echo CHtml::image(Yii::app()->theme->baseUrl . '/img/logo.png', "Logo " . Yii::app()->name) ?>
                         </a>
                         <p class="italic">Lorem ipsum ex vix illud nonummy, novum tation et
                             his. At vix scriptaset patrioque scribentur, at pro fugit erts</p>
@@ -329,7 +327,7 @@
                         </ul>
                     </li>
                     <li class="grid_3">
-                        
+
                     </li>
                 </ul>
             </div>

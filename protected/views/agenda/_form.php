@@ -20,14 +20,8 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pessoa_id'); ?>
-		<?php echo $form->textField($model,'pessoa_id'); ?>
-		<?php echo $form->error($model,'pessoa_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'estabelecimento_id'); ?>
-		<?php echo $form->textField($model,'estabelecimento_id'); ?>
+		<?php echo $form->textField($model,'estabelecimento_id',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'estabelecimento_id'); ?>
 	</div>
 
@@ -41,6 +35,12 @@
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'usergroups_user_id'); ?>
+		<?php echo $form->textField($model,'usergroups_user_id',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'usergroups_user_id'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -4,14 +4,10 @@
  * This is the model class for table "agenda".
  *
  * The followings are the available columns in table 'agenda':
- * @property integer $pessoa_id
- * @property integer $estabelecimento_id
+ * @property string $estabelecimento_id
  * @property string $data
  * @property integer $status
- *
- * The followings are the available model relations:
- * @property Estabelecimento $estabelecimento
- * @property Pessoa $pessoa
+ * @property string $usergroups_user_id
  */
 class Agenda extends CActiveRecord
 {
@@ -31,11 +27,12 @@ class Agenda extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pessoa_id, estabelecimento_id, data, status', 'required'),
-			array('pessoa_id, estabelecimento_id, status', 'numerical', 'integerOnly'=>true),
+			array('estabelecimento_id, data, status, usergroups_user_id', 'required'),
+			array('status', 'numerical', 'integerOnly'=>true),
+			array('estabelecimento_id, usergroups_user_id', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pessoa_id, estabelecimento_id, data, status', 'safe', 'on'=>'search'),
+			array('estabelecimento_id, data, status, usergroups_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,8 +44,6 @@ class Agenda extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'estabelecimento' => array(self::BELONGS_TO, 'Estabelecimento', 'estabelecimento_id'),
-			'pessoa' => array(self::BELONGS_TO, 'Pessoa', 'pessoa_id'),
 		);
 	}
 
@@ -58,10 +53,13 @@ class Agenda extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pessoa_id' => 'Pessoa',
 			'estabelecimento_id' => 'Estabelecimento',
 			'data' => 'Data',
-			'status' => 'Status',
+			'status' => '0 - Quero ir
+1 - Eu vou
+2 - Eu fui
+',
+			'usergroups_user_id' => 'Usergroups User',
 		);
 	}
 
@@ -83,10 +81,10 @@ class Agenda extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('pessoa_id',$this->pessoa_id);
-		$criteria->compare('estabelecimento_id',$this->estabelecimento_id);
+		$criteria->compare('estabelecimento_id',$this->estabelecimento_id,true);
 		$criteria->compare('data',$this->data,true);
 		$criteria->compare('status',$this->status);
+		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -71,7 +71,7 @@ class PontoController extends Controller
 		{
 			$model->attributes=$_POST['Ponto'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->pessoa_id));
+				$this->redirect(array('view','id'=>$model->usergroups_user_id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class PontoController extends Controller
 		{
 			$model->attributes=$_POST['Ponto'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->pessoa_id));
+				$this->redirect(array('view','id'=>$model->usergroups_user_id));
 		}
 
 		$this->render('update',array(

@@ -1,6 +1,17 @@
 <?php
 /* @var $this BrindeController */
 /* @var $model Brinde */
+
+$this->breadcrumbs=array(
+	'Brindes'=>array('index'),
+	'Manage',
+);
+
+$this->menu=array(
+	array('label'=>'List Brinde', 'url'=>array('index')),
+	array('label'=>'Create Brinde', 'url'=>array('create')),
+);
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -14,7 +25,6 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<div class="container_12 p1">
 
 <h1>Manage Brindes</h1>
 
@@ -43,5 +53,3 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
-
-</div>

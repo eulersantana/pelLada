@@ -4,12 +4,9 @@
  * This is the model class for table "ponto".
  *
  * The followings are the available columns in table 'ponto':
- * @property integer $pessoa_id
+ * @property string $usergroups_user_id
  * @property integer $pontuacao
  * @property integer $escore
- *
- * The followings are the available model relations:
- * @property Pessoa $pessoa
  */
 class Ponto extends CActiveRecord
 {
@@ -29,11 +26,12 @@ class Ponto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pessoa_id, pontuacao, escore', 'required'),
-			array('pessoa_id, pontuacao, escore', 'numerical', 'integerOnly'=>true),
+			array('usergroups_user_id, pontuacao, escore', 'required'),
+			array('pontuacao, escore', 'numerical', 'integerOnly'=>true),
+			array('usergroups_user_id', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pessoa_id, pontuacao, escore', 'safe', 'on'=>'search'),
+			array('usergroups_user_id, pontuacao, escore', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +43,6 @@ class Ponto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pessoa' => array(self::BELONGS_TO, 'Pessoa', 'pessoa_id'),
 		);
 	}
 
@@ -55,7 +52,7 @@ class Ponto extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pessoa_id' => 'Pessoa',
+			'usergroups_user_id' => 'Usergroups User',
 			'pontuacao' => 'Pontuacao',
 			'escore' => 'Escore',
 		);
@@ -79,7 +76,7 @@ class Ponto extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('pessoa_id',$this->pessoa_id);
+		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
 		$criteria->compare('pontuacao',$this->pontuacao);
 		$criteria->compare('escore',$this->escore);
 

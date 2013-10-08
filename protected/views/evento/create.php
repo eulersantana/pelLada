@@ -1,11 +1,18 @@
 <?php
 /* @var $this EventoController */
 /* @var $model Evento */
+
+$this->breadcrumbs=array(
+	'Eventos'=>array('index'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'List Evento', 'url'=>array('index')),
+	array('label'=>'Manage Evento', 'url'=>array('admin')),
+);
 ?>
-<div class="container_12 p1">
 
 <h1>Create Evento</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
-
-</div>

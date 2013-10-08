@@ -4,16 +4,13 @@
  * This is the model class for table "evento".
  *
  * The followings are the available columns in table 'evento':
- * @property integer $id
- * @property integer $estabelecimento_id
+ * @property string $id
+ * @property string $estabelecimento_id
  * @property string $atracao
  * @property string $descricao
  * @property string $data
  * @property string $imagem
  * @property integer $preco
- *
- * The followings are the available model relations:
- * @property Estabelecimento $estabelecimento
  */
 class Evento extends CActiveRecord
 {
@@ -34,7 +31,8 @@ class Evento extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('estabelecimento_id, atracao, data, imagem', 'required'),
-			array('estabelecimento_id, preco', 'numerical', 'integerOnly'=>true),
+			array('preco', 'numerical', 'integerOnly'=>true),
+			array('estabelecimento_id', 'length', 'max'=>20),
 			array('descricao', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -50,7 +48,6 @@ class Evento extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'estabelecimento' => array(self::BELONGS_TO, 'Estabelecimento', 'estabelecimento_id'),
 		);
 	}
 
@@ -88,8 +85,8 @@ class Evento extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('estabelecimento_id',$this->estabelecimento_id);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('estabelecimento_id',$this->estabelecimento_id,true);
 		$criteria->compare('atracao',$this->atracao,true);
 		$criteria->compare('descricao',$this->descricao,true);
 		$criteria->compare('data',$this->data,true);

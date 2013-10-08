@@ -1,31 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "pessoa".
+ * This is the model class for table "estabelecimento_has_usergroups_user".
  *
- * The followings are the available columns in table 'pessoa':
- * @property integer $id
- * @property string $nome
- * @property string $rg
- * @property string $email
- * @property string $telefone
- * @property string $nascimento
- * @property string $usuario
- * @property string $senha
- *
- * The followings are the available model relations:
- * @property Agenda[] $agendas
- * @property Estabelecimento[] $estabelecimentos
- * @property Ponto $ponto
+ * The followings are the available columns in table 'estabelecimento_has_usergroups_user':
+ * @property string $estabelecimento_id
+ * @property string $usergroups_user_id
  */
-class Pessoa extends CActiveRecord
+class EstabelecimentoHasUsergroupsUser extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pessoa';
+		return 'estabelecimento_has_usergroups_user';
 	}
 
 	/**
@@ -36,11 +25,11 @@ class Pessoa extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome, rg, email, telefone, nascimento, usuario, senha', 'required'),
-			array('rg, email, telefone, nascimento, usuario, senha', 'length', 'max'=>45),
+			array('estabelecimento_id, usergroups_user_id', 'required'),
+			array('estabelecimento_id, usergroups_user_id', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nome, rg, email, telefone, nascimento, usuario, senha', 'safe', 'on'=>'search'),
+			array('estabelecimento_id, usergroups_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,9 +41,6 @@ class Pessoa extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'agendas' => array(self::HAS_MANY, 'Agenda', 'pessoa_id'),
-			'estabelecimentos' => array(self::MANY_MANY, 'Estabelecimento', 'pessoa_has_estabelecimento(pessoa_id, estabelecimento_id)'),
-			'ponto' => array(self::HAS_ONE, 'Ponto', 'pessoa_id'),
 		);
 	}
 
@@ -64,14 +50,8 @@ class Pessoa extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'nome' => 'Nome',
-			'rg' => 'Rg',
-			'email' => 'Email',
-			'telefone' => 'Telefone',
-			'nascimento' => 'Nascimento',
-			'usuario' => 'Usuario',
-			'senha' => 'Senha',
+			'estabelecimento_id' => 'Estabelecimento',
+			'usergroups_user_id' => 'Usergroups User',
 		);
 	}
 
@@ -93,14 +73,8 @@ class Pessoa extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('nome',$this->nome,true);
-		$criteria->compare('rg',$this->rg,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('telefone',$this->telefone,true);
-		$criteria->compare('nascimento',$this->nascimento,true);
-		$criteria->compare('usuario',$this->usuario,true);
-		$criteria->compare('senha',$this->senha,true);
+		$criteria->compare('estabelecimento_id',$this->estabelecimento_id,true);
+		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -111,7 +85,7 @@ class Pessoa extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Pessoa the static model class
+	 * @return EstabelecimentoHasUsergroupsUser the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -1,8 +1,16 @@
 <?php
 /* @var $this BrindeController */
 /* @var $dataProvider CActiveDataProvider */
+
+$this->breadcrumbs=array(
+	'Brindes',
+);
+
+$this->menu=array(
+	array('label'=>'Create Brinde', 'url'=>array('create')),
+	array('label'=>'Manage Brinde', 'url'=>array('admin')),
+);
 ?>
-<div class="container_12 p1">
 
 <h1>Brindes</h1>
 
@@ -10,5 +18,3 @@
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
-
-</div>

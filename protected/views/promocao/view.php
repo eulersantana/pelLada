@@ -1,8 +1,20 @@
 <?php
 /* @var $this PromocaoController */
 /* @var $model Promocao */
+
+$this->breadcrumbs=array(
+	'Promocaos'=>array('index'),
+	$model->id,
+);
+
+$this->menu=array(
+	array('label'=>'List Promocao', 'url'=>array('index')),
+	array('label'=>'Create Promocao', 'url'=>array('create')),
+	array('label'=>'Update Promocao', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete Promocao', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Promocao', 'url'=>array('admin')),
+);
 ?>
-<div class="container_12 p1">
 
 <h1>View Promocao #<?php echo $model->id; ?></h1>
 
@@ -18,5 +30,3 @@
 		'imagem',
 	),
 )); ?>
-
-</div>

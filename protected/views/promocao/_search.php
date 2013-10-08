@@ -13,12 +13,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->textField($model,'id',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'estabelecimento_id'); ?>
-		<?php echo $form->textField($model,'estabelecimento_id'); ?>
+		<?php echo $form->textField($model,'estabelecimento_id',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">

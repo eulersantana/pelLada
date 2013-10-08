@@ -2,6 +2,16 @@
 /* @var $this EventoController */
 /* @var $model Evento */
 
+$this->breadcrumbs=array(
+	'Eventos'=>array('index'),
+	'Manage',
+);
+
+$this->menu=array(
+	array('label'=>'List Evento', 'url'=>array('index')),
+	array('label'=>'Create Evento', 'url'=>array('create')),
+);
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -15,7 +25,6 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<div class="container_12 p1">
 
 <h1>Manage Eventos</h1>
 
@@ -50,5 +59,3 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
-
-</div>

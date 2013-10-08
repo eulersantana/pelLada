@@ -19,7 +19,7 @@
             <div class="buttons">
                  <?php echo CHtml::submitButton('Logar'); ?>
                  <span>
-                    <a href="javascript:void(0)" class="entypo-user-add register">Register</a>
+                    <a href="javascript:void(0)" class="entypo-user-add register">Registre-se</a>
                  </span>
             </div>
             <div class="hr">

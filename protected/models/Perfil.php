@@ -1,20 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "pessoa_has_estabelecimento".
+ * This is the model class for table "perfil".
  *
- * The followings are the available columns in table 'pessoa_has_estabelecimento':
- * @property integer $pessoa_id
- * @property integer $estabelecimento_id
+ * The followings are the available columns in table 'perfil':
+ * @property string $id
+ * @property string $nome
+ * @property string $rg
+ * @property string $telefone
+ * @property string $nascimento
+ * @property string $usergroups_user_id
  */
-class PessoaHasEstabelecimento extends CActiveRecord
+class Perfil extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pessoa_has_estabelecimento';
+		return 'perfil';
 	}
 
 	/**
@@ -25,11 +29,13 @@ class PessoaHasEstabelecimento extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pessoa_id, estabelecimento_id', 'required'),
-			array('pessoa_id, estabelecimento_id', 'numerical', 'integerOnly'=>true),
+			array('nome, rg, telefone, nascimento, usergroups_user_id', 'required'),
+			array('nome', 'length', 'max'=>255),
+			array('rg, telefone, nascimento', 'length', 'max'=>45),
+			array('usergroups_user_id', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pessoa_id, estabelecimento_id', 'safe', 'on'=>'search'),
+			array('id, nome, rg, telefone, nascimento, usergroups_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,8 +56,12 @@ class PessoaHasEstabelecimento extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pessoa_id' => 'Pessoa',
-			'estabelecimento_id' => 'Estabelecimento',
+			'id' => 'ID',
+			'nome' => 'Nome',
+			'rg' => 'Rg',
+			'telefone' => 'Telefone',
+			'nascimento' => 'Nascimento',
+			'usergroups_user_id' => 'Usergroups User',
 		);
 	}
 
@@ -73,8 +83,12 @@ class PessoaHasEstabelecimento extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('pessoa_id',$this->pessoa_id);
-		$criteria->compare('estabelecimento_id',$this->estabelecimento_id);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('nome',$this->nome,true);
+		$criteria->compare('rg',$this->rg,true);
+		$criteria->compare('telefone',$this->telefone,true);
+		$criteria->compare('nascimento',$this->nascimento,true);
+		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -85,7 +99,7 @@ class PessoaHasEstabelecimento extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return PessoaHasEstabelecimento the static model class
+	 * @return Perfil the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

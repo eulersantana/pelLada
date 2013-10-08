@@ -1,9 +1,18 @@
 <?php
 /* @var $this EstabelecimentoController */
 /* @var $model Estabelecimento */
-?>
-<div class="container_12 p1">
-    <h1>Adicionar Estabelecimento</h1>
 
-    <?php $this->renderPartial('_form', array('model'=>$model)); ?>
-</div>
+$this->breadcrumbs=array(
+	'Estabelecimentos'=>array('index'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'List Estabelecimento', 'url'=>array('index')),
+	array('label'=>'Manage Estabelecimento', 'url'=>array('admin')),
+);
+?>
+
+<h1>Create Estabelecimento</h1>
+
+<?php $this->renderPartial('_form', array('model'=>$model)); ?>

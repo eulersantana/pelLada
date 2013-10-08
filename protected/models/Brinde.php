@@ -4,7 +4,7 @@
  * This is the model class for table "brinde".
  *
  * The followings are the available columns in table 'brinde':
- * @property integer $id
+ * @property string $id
  * @property string $descricao
  * @property integer $pontuacao
  */
@@ -75,7 +75,7 @@ class Brinde extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id',$this->id,true);
 		$criteria->compare('descricao',$this->descricao,true);
 		$criteria->compare('pontuacao',$this->pontuacao);
 

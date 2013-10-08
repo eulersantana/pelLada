@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title><?php echo $this->pageTitle ?></title>
+        <title><?php echo $this->pageTitle; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript">
             //<![CDATA[
@@ -200,66 +200,80 @@
                 </div>
                 <ul class="phone-menu">
                     <li class="page-menu">
-                        <a>Home <span></span></a>
+                        <a><?php echo $this->pageTitle; ?> <span></span></a>
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <?php echo CHtml::link("Página Inicial", Yii::app()->baseUrl, array("class" => (!isSet($this->selecionado)) ? "selected" : "")); ?>
                             </li>
-                            <li>
-                                <a href="blog-page.html">Blog</a>
-                                <ul>
-                                    <li>
-                                        <a href="blog-page.html">Blog Posts</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-page-single.html">Blog Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-page-single-carousel.html">Blog Post
-                                            Carousel</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="events-page.html">Page List</a>
-                                <ul>
-                                    <li>
-                                        <a href="albums-page.html">Albums</a>
-                                    </li>
-                                    <li>
-                                        <a href="events-single-page.html">Event Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="events-page.html">Events</a>
-                                    </li>
-                                    <li>
-                                        <a href="events-page-2.html">Events 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="photos-page.html">Photos</a>
-                                    </li>
-                                    <li>
-                                        <a href="videos-page.html">Videos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="elements.html">Template Information</a>
-                                <ul>
-                                    <li>
-                                        <a href="elements.html">Elements</a>
-                                    </li>
-                                    <li>
-                                        <a href="typography.html">Typography</a>
-                                    </li>
-                                    <li>
-                                        <a href="error.html">Error Page</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
+                            <?php if (!Yii::app()->user->isGuest) {
+                            if (Yii::app()->user->groupName == "root") {
+                                ?>
+                                <li>
+                                    <?php echo CHtml::link("Brinde", Yii::app()->baseUrl . "/brinde", array("class" => (isSet($this->selecionado) && $this->selecionado == "brinde") ? "selected" : "")); ?>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Brinde", Yii::app()->baseUrl . "/brinde/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Brinde", Yii::app()->baseUrl . "/brinde/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Brinde", Yii::app()->baseUrl . "/brinde", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Evento", Yii::app()->baseUrl . "/evento", array("class" => (isSet($this->selecionado) && $this->selecionado == "evento") ? "selected" : "")); ?>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Evento", Yii::app()->baseUrl . "/evento/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Evento", Yii::app()->baseUrl . "/evento/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Evento", Yii::app()->baseUrl . "/evento", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Promoção", Yii::app()->baseUrl . "/promocao", array("class" => (isSet($this->selecionado) && $this->selecionado == "promocao") ? "selected" : "")); ?>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <?php echo CHtml::link("Adicionar Promoção", Yii::app()->baseUrl . "/promocao/create", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Gerenciar Promoção", Yii::app()->baseUrl . "/promocao/admin", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo CHtml::link("Listar Promoção", Yii::app()->baseUrl . "/promocao", array("class" => "template-based-element-background-hover")); ?>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <?php echo CHtml::link("Usuário", Yii::app()->baseUrl . "/userGroups/user", array("class" => (isSet($this->selecionado) && $this->selecionado == "usuario") ? "selected" : "")); ?>
+                                </li>
+                            <?php } else { ?>
+                                <li>
+                                    <a href="elements.html">Example</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="elements.html">Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="typography.html">Typography</a>
+                                        </li>
+                                        <li>
+                                            <a href="error.html">Error Page</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php }
+                        }
+                        ?>
+                        <li>
+                            <a href="<?php echo Yii::app()->baseUrl . "/site/contact"; ?>">Contato</a>
+                        </li>
                         </ul>
                     </li>
                 </ul>

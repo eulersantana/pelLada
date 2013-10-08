@@ -1,6 +1,6 @@
 <?php
 /* @var $this SiteController */
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle=$this->title_action;
 
 $this->renderPartial("_estabelecimento");
 ?>

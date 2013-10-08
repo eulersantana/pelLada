@@ -208,7 +208,7 @@ ul.list-simple-2 li a.bif-list{background:url(../img/bif-list.png) no-repeat lef
 .grid_user_info ul.features-01 li:hover .bg-pink-li-feauture{margin-left:-10px;margin-top:-10px;} 
 .grid_user_info ul.features-01 li:hover img.container-img{top:-25px;} 
 .grid_user_info ul.features-01 li:hover .feature{margin-top:15px;}
-.grid_user_info ul.features-01 li .f_image{position: relative; top: 100px; z-index: 0;}
+.grid_user_info ul.features-01 li .f_image{position: relative; top: 100px; z-index: 0; width: 100%;}
 .grid_user_info ul.features-01 li .feature{position: relative; top: -120px; z-index: 2;}
 a.user_login{background:url(../img/user-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}
 a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}
@@ -226,4 +226,50 @@ a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px s
 }
 .required{
     color: red;
+}
+.social-media-container h1, 
+.social-media-container h2, 
+.social-media-container h3, 
+.social-media-container h4,
+.social-media-container h5,
+.social-media-container h6{
+    color: #FFFFFF;
+    margin:0;
+    padding: 0;
+    display: inline;
+}
+
+.social-media-container .user_info{
+    color: #FFFFFF;
+    margin:0;
+    padding: 0;
+    line-height: 1.5em;
+}
+.content-page-home .grid_16{
+    background: none repeat scroll 0% 0% rgb(25, 25, 25);
+    padding: 1%;
+    width: 98%;
+    position: relative;
+    z-index: 5;
+}
+.content-page-home .grid_100,
+.content-page-home .grid_100 .posts-container .post-container .right-content .info-post{
+    width: 100%;
+}
+
+.content-page-home .grid_100{
+    margin: 0;
+}
+
+.content-page-home .grid_100 .left-content{
+    width: 29%;
+}
+
+.content-page-home .grid_100 .right-content{
+    width: 69%;
+}
+
+.content-page-home .grid_100 .posts-container .post-container .right-content p.content-post-text,
+.content-page-home .grid_100 .posts-container .post-container .right-content .title-post{
+    text-align: justify;
 }

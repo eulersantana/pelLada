@@ -3,7 +3,7 @@
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' :: Contacte-nos';
+$this->pageTitle=Yii::app()->name . ' - Contacte-nos';
 ?>
 <div class="contato container_12 p1">
     <h1>Contato</h1>

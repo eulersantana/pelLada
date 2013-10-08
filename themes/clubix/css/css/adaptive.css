@@ -422,6 +422,7 @@
   .content-page-home .grid_12 {
     width: 440px !important;
   }
+  
   .container-960 {
     width: 460px !important;
     margin: 0 auto;
@@ -1101,4 +1102,20 @@
   .container-slider {
     margin-top: -161px !important;
   }
+}
+
+@media screen and (max-width: 768px) {
+    .grid_user_info ul.features-01 li {
+        margin: 0px auto;
+        float: none !important;
+    }
+    .grid_user_info ul.features-01 li .f_image{width: 70% !important;}
+}
+
+@media screen and (max-width: 480px) {
+    .grid_user_info ul.features-01 li {
+        margin: 0px auto;
+        float: none !important;
+    }
+    .grid_user_info ul.features-01 li .f_image{width: 100% !important;}
 }

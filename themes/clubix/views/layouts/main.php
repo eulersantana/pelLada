@@ -33,6 +33,7 @@
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/easy-filter.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/jplayer/jquery.jplayer.min.js'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/accordion-tab.js'); ?>
+<?php //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/loginStyle.css'); ?> 
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/tabbed-interface.js'); ?>
 <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/prettyPhoto/css/prettyPhoto.css'); ?>
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/prettyPhoto/js/jquery.prettyPhoto.js'); ?>
@@ -63,7 +64,7 @@
 
       <![endif]-->
 </head>
-    <body>
+    <body cz-shortcut-listen="true">
         
         <div class="bg-header">
             <div class="container_12">
@@ -75,7 +76,7 @@
                 <div class="grid_2 push_8 omega social-media-container">
                     <div class="social-header-container">
                         <ul>
-                            <li class="template-based-element-background-color-hover">
+                            <!-- <li class="template-based-element-background-color-hover">
                                 <a class="twitter-header" href="http://www.twitter.com"></a>
                             </li>
                             <li class="template-based-element-background-color-hover">
@@ -83,7 +84,7 @@
                             </li>
                             <li class="template-based-element-background-color-hover">
                                 <a class="facebook-header" href="http://www.tumblr.com"></a>
-                            </li>
+                            </li> -->
                             <li class="template-based-element-background-color-hover">
                                 <?php 
                                 if(Yii::app()->user->isGuest){
@@ -143,7 +144,7 @@
                             <?php echo CHtml::link("Promoção",Yii::app()->baseUrl."/promocao",array("class"=>(isSet($this->selecionado) && $this->selecionado == "promocao") ? "selected" : "")); ?>
                             <ul class="sub-menu-header">
                                 <li>
-                                    <?php echo CHtml::link("Adicionar Promoção",Yii::app()->baseUrl."/promocao/create",array("class"=>"template-based-element-background-hover")); ?>
+                                    <?php echo CHtml::link("Adicionar Promoção",Yii::app()->baseUrl."/postao/create",array("class"=>"template-based-element-background-hover")); ?>
                                 </li>
                                 <li>
                                     <?php echo CHtml::link("Gerenciar Promoção",Yii::app()->baseUrl."/promocao/admin",array("class"=>"template-based-element-background-hover")); ?>

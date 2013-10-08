@@ -1,5 +1,5 @@
 <div class="container-960 content-page-home">
-    <div class="grid_12 container_12 alpha omega">
+    <div class="grid_16 container_12 alpha omega">
         <div class="grid_8 alpha">
             <div class="posts">
                 <h1 class="underline-title">Últimas <span>promoções</span></h1>

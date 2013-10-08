@@ -7,21 +7,32 @@
         'htmlOptions'=>array('class'=>'block-content form valid')
 )); ?>
 
-    <p class="inline-small-label">
-        <label for="username">Login</label>
-        <?php echo $form->textField($model,'username', array('class'=>'text validate[required]')); ?>
-    </p>
-    <p class="inline-small-label">
-        <label for="password">Senha</label>
-        <?php echo $form->passwordField($model,'password', array('class'=>'password validate[required]')); ?>
-    </p>
-    <div class="clear"></div>
-    <div class="block-actions">
-        <ul class="actions-right">
-            <li>
-                <?php echo CHtml::submitButton('Logar', array('class'=>'button')); ?>
-            </li>
-        </ul>
+    <div class="loginpanel">
+            <div class="txt">                
+                <?php echo $form->textField($model,'username', array('class'=>'text validate[required]','placeholder' =>"Username")); ?>
+                <label for="username" class="entypo-user"></label>
+            </div>
+            <div class="txt">
+                <?php echo $form->passwordField($model,'password', array('class'=>'password validate[required]','placeholder' =>"Senha")); ?>
+                <label for="password" class="entypo-lock"></label>
+            </div>
+            <div class="buttons">
+                 <?php echo CHtml::submitButton('Logar'); ?>
+                 <span>
+                    <a href="javascript:void(0)" class="entypo-user-add register">Register</a>
+                 </span>
+            </div>
+            <div class="hr">
+                    <div></div>
+                    <div>OU</div>
+                    <div></div>
+                </div>
+
+                <div class="social">
+                    <a href="javascript:void(0)" class="facebook"></a>
+                    <a href="javascript:void(0)" class="twitter"></a>
+                    <a href="javascript:void(0)" class="googleplus"></a>
+                </div>
     </div>
 <?php $this->endWidget(); ?>
 

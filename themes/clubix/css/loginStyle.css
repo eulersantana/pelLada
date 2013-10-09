@@ -8,6 +8,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Courgette);
 @charset 'UTF-8';
+
 @font-face {
   font-family: 'entypo';
   font-style: 'normal';
@@ -898,18 +899,24 @@ body {
   -o-transition: all 0s;
   transition: all 0s;
 }*/
+
+form.login{
+  padding: 1%;
+}
+
 div.loginpanel {
+  
   width: 100%;
   max-width: 500px;
   padding: 20px;
   margin: 0 auto;
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
+/*  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%);*/
+  
   background-color: rgba(221, 221, 221, 0.6);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -917,7 +924,6 @@ div.loginpanel {
   -webkit-box-shadow: 0 0 5px 1px #333;
   -moz-box-shadow: 0 0 5px 1px #333;
   box-shadow: 0 0 5px 1px #333;
-  margin-top: 17%;
 }
 div.loginpanel a.register {
   color: #444;

@@ -5,7 +5,7 @@
 
 $this->pageTitle=Yii::app()->name . ' - Contacte-nos';
 ?>
-<div class="contato container_12 p1">
+<div class="bgb container_12 p1">
     <h1>Contato</h1>
 
     <?php if(Yii::app()->user->hasFlash('contact')): ?>

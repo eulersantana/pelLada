@@ -4,7 +4,7 @@
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-        'htmlOptions'=>array('class'=>'block-content form valid')
+        'htmlOptions'=>array('class'=>'login')
 )); ?>
 
     <div class="loginpanel">
@@ -19,7 +19,7 @@
             <div class="buttons">
                  <?php echo CHtml::submitButton('Logar'); ?>
                  <span>
-                    <a href="javascript:void(0)" class="entypo-user-add register">Registre-se</a>
+                    <?php echo CHtml::link("Registre-se", Yii::app()->baseUrl."/site/registro", array("class"=>"entypo-user-add register")); ?>
                  </span>
             </div>
             <div class="hr">

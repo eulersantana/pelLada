@@ -7,7 +7,7 @@ class SiteController extends Controller
 	 */
         public $title_action = "Página Inicial";
         public $selecionado = "site";
-        
+                
 	public function actions()
 	{
 		return array(
@@ -108,7 +108,14 @@ class SiteController extends Controller
 	 */
 	public function actionLogout()
 	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+            Yii::app()->user->logout();
+            $this->redirect(Yii::app()->homeUrl);
 	}
+        
+        public function actionRegistro()
+        {
+            $model_usergroups_user = new UserGroupsUser;
+            $model_perfil = new Perfil;
+            $this->render('registro',array('model_user'=>$model_usergroups_user,"model_perfil"=>$model_perfil));
+        }
 }

@@ -212,7 +212,7 @@ ul.list-simple-2 li a.bif-list{background:url(../img/bif-list.png) no-repeat lef
 .grid_user_info ul.features-01 li .feature{position: relative; top: -120px; z-index: 2;}
 a.user_login{background:url(../img/user-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}
 a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px solid rgba(255,255,255,0.3);}
-.contato{
+.bgb{
     background: none repeat scroll 0% 0% rgb(25, 25, 25);
     padding: 10px;
     width: 940px;
@@ -220,11 +220,19 @@ a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px s
     z-index: 5;
 }
 
+.bgb h1,
+.bgb h2,
+.bgb h3,
+.bgb h4{
+    color: #FFF;
+}
+
 .buttons, 
 .comentario{
     padding-top: 10px;
 }
-.required{
+
+span.required{
     color: red;
 }
 .social-media-container h1, 
@@ -273,3 +281,16 @@ a.user_logout{background:url(../img/user-logout-icon.png) no-repeat;border:1px s
 .content-page-home .grid_100 .posts-container .post-container .right-content .title-post{
     text-align: justify;
 }
+
+form.formulario p{margin-bottom:8px;}form.formulario p label{font-size:14px;color:#525252;}
+form.formulario ul.formulario-inputs li{margin-left:20px;float:left;}form.formulario ul.formulario-inputs li input{width:190px;height:13px;}
+form.formulario ul.formulario-inputs li input[id=name]{width:104px;}
+form.formulario ul.formulario-inputs li:first-child{margin-left:0px;}
+form.formulario textarea,form.formulario input{outline:none;background:#191919;border:1px solid #303030;padding:15px;color:#eee;font-size:14px;margin-bottom:30px;}
+form.formulario textarea{width:588px;height:148px;font-family:'Lato';}
+form.formulario input[type=submit]{border:none;background:#8e44ad;cursor:pointer;text-transform:uppercase;color:#d2d2d2;height:55px;padding:15px 30px;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;}form.formulario input[type=submit]:hover{background:#DDDDDD !important;color:#8E44AD !important;}
+.container-contact-page iframe{margin-bottom:20px;}
+.container-contact-page .text-content-contact p{font-size:14px;color:#bcbcbc;line-height:20px;margin-bottom:20px;}
+.container-contact-page .info-post{padding-bottom:20px;float:left;width:580px;border-bottom:1px solid #3a3a3a;margin-bottom:20px;}.container-contact-page .info-post ul li{margin-right:20px;float:left;}.container-contact-page .info-post ul li img{position:absolute;}
+.container-contact-page .info-post ul li p{margin-left:20px;font-size:12px;color:#a1a1a1;line-height:18px;}.container-contact-page .info-post ul li p.email-contact{margin-left:32px;}
+.formulario-contact input[type=text],.formulario-contact input[type=email]{width:268px !important;}

@@ -268,7 +268,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                            <?php }
+                            <?php } ?>
+                            <li>
+                                <?php echo CHtml::link("Logout", Yii::app()->baseUrl . "/userGroups/user/logout", array()); ?>
+                            </li>
+                        <?
                         }
                         ?>
                         <li>

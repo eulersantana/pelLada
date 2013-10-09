@@ -7,6 +7,7 @@
  * @property string $id
  * @property string $descricao
  * @property integer $pontuacao
+ * @property string $imagem
  */
 class Brinde extends CActiveRecord
 {
@@ -28,9 +29,10 @@ class Brinde extends CActiveRecord
 		return array(
 			array('descricao', 'required'),
 			array('pontuacao', 'numerical', 'integerOnly'=>true),
+			array('imagem', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, descricao, pontuacao', 'safe', 'on'=>'search'),
+			array('id, descricao, pontuacao, imagem', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +56,7 @@ class Brinde extends CActiveRecord
 			'id' => 'ID',
 			'descricao' => 'Descricao',
 			'pontuacao' => 'Pontuacao',
+			'imagem' => 'Imagem',
 		);
 	}
 
@@ -78,6 +81,7 @@ class Brinde extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('descricao',$this->descricao,true);
 		$criteria->compare('pontuacao',$this->pontuacao);
+		$criteria->compare('imagem',$this->imagem,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

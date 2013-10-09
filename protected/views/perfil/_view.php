@@ -29,5 +29,9 @@
 	<?php echo CHtml::encode($data->usergroups_user_id); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('imagem')); ?>:</b>
+	<?php echo CHtml::encode($data->imagem); ?>
+	<br />
+
 
 </div>

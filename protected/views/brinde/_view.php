@@ -17,5 +17,9 @@
 	<?php echo CHtml::encode($data->pontuacao); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('imagem')); ?>:</b>
+	<?php echo CHtml::encode($data->imagem); ?>
+	<br />
+
 
 </div>

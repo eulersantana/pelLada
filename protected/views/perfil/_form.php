@@ -49,6 +49,12 @@
 		<?php echo $form->error($model,'usergroups_user_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'imagem'); ?>
+		<?php echo $form->textField($model,'imagem',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'imagem'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

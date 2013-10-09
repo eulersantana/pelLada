@@ -41,6 +41,11 @@
 		<?php echo $form->textField($model,'usergroups_user_id',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'imagem'); ?>
+		<?php echo $form->textField($model,'imagem',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

@@ -304,16 +304,16 @@
         <div class="container-footer-top template-based-element-border-color">
             <div class="container_12">
                 <ul class="footer-top-itm">
-                    <li class="grid_3">
+<!--                    <li class="grid_3">
                         <a class="logo-footer" href="index.html">
-                            <?php echo CHtml::image(Yii::app()->theme->baseUrl . '/img/logo.png', "Logo " . Yii::app()->name) ?>
+                            <?php // echo CHtml::image(Yii::app()->theme->baseUrl . '/img/logo.png', "Logo " . Yii::app()->name) ?>
                         </a>
                         <p class="italic">Lorem ipsum ex vix illud nonummy, novum tation et
                             his. At vix scriptaset patrioque scribentur, at pro fugit erts</p>
                         <p class="italic">Srterem molestiae, sed et vivendo ali Lorem ipsum
                             ex vix illud nonummy, novum tation et his. At vix scripta</p>
-                    </li>
-                    <li class="grid_3">
+                    </li>-->
+<!--                    <li class="grid_3">
                         <h1 class="footer-top-title">Recent Posts</h1>
                         <ul class="recent-post-footer">
                             <li>
@@ -329,8 +329,8 @@
                                 <a class="template-based-element-color-hover" href="blog-page-single.html-4">Nemis Fugiats Voluptas Dolores</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="grid_3">
+                    </li>-->
+<!--                    <li class="grid_3">
                         <h1 class="footer-top-title">twitter</h1>
                         <ul class="twitter-footer-top">
                             <li>
@@ -343,7 +343,7 @@
                                     congue ac et risus.</p>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li class="grid_3">
 
                     </li>
@@ -356,25 +356,9 @@
                     <a class="back-to-top template-based-element-background" href="#"><span class="icon-back-to-top"></span></a>
                 </div>
                 <div class="grid_5 push_6 omega social-cr">
-                    <ul class="social-footer-bottom">
-                        <li>
-                            <a class="facebook" href="http://www.tumblr.com"></a>
-                        </li>
-                        <li>
-                            <a class="twitter" href="http://www.twitter.com"></a>
-                        </li>
-                        <li>
-                            <a class="in" href="http://www.vimeo.com"></a>
-                        </li>
-                        <li>
-                            <a class="rss" href="http://www.tumblr.com"></a>
-                        </li>
-                        <li>
-                            <a class="dribble" href="http://www.tumblr.com"></a>
-                        </li>
-                    </ul>
+                    
                     <div class="cr-section">
-                        <p>Copyright 2012 <a href="index.html">Clubix</a> <span class="sep-cr">|</span>All Rights Reserved <span class="sep-cr">|</span>Powered by <a href="http://wordpress.com/">WordPress</a></p>
+                        <p>Copyright 2012 <a href="index.html">TriBalda</a> <span class="sep-cr">|</span>Feitor por<a href="http://develops6.com/">MAHDE - Develops</a></p>
                     </div>
                 </div>
             </div>

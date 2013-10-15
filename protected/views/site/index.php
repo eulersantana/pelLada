@@ -16,6 +16,7 @@ if(!Yii::app()->user->isGuest){
 <div class="clear"></div>
 <?php 
             $this->renderPartial("_user_info");
+            
          } 
       }else{
 ?>
@@ -28,6 +29,6 @@ if(!Yii::app()->user->isGuest){
 
 <div class="clear"></div>
 <?php 
-$this->renderPartial("_promocao");
+    $this->renderPartial("_promocao");
 ?>
 <div class="clear"></div>

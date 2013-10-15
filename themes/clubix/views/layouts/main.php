@@ -85,7 +85,11 @@
                             } else {
                             ?>    
                             <li class="template-based-element-background-color-hover user_info">
-                                Olá <?php echo Yii::app()->user->name; ?>
+                                Olá 
+                                <?php 
+                                $logado = Perfil::model()->find(" usergroups_user_id = ".Yii::app()->user->id);
+                                echo (empty($logado)) ?  Yii::app()->user->name : $logado->nome; 
+                                ?>
                             </li>
                             <li class="template-based-element-background-color-hover">
                             <?php echo CHtml::link("", Yii::app()->baseUrl . "/userGroups/user/logout", array("class" => "user_logout")); ?>

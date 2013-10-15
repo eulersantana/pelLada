@@ -533,12 +533,12 @@ class UserGroupsUser extends CActiveRecord
 		$time = explode(':', $time);
 
 		date_default_timezone_set('UTC');
-    	$timestamp = mktime($time[0], $time[1], $time[2], $date[1], $date[2], $date[0]);
+                $timestamp = mktime($time[0], $time[1], $time[2], $date[1], $date[2], $date[0]);
 		// create the salt
 		$salt = $this->username . $timestamp;
 		// add the additional salt if it's provided
-		if (Yii::app()->controller->module->salt)
-			$salt .= Yii::app()->controller->module->salt;
+		if(isSet(Yii::app()->controller->module->salt))
+                    $salt .= Yii::app()->controller->module->salt;
 
 		return $salt;
 	}

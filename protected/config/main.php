@@ -27,7 +27,7 @@ return array(
 		// uncomment the following to enable the Gii tool
 		'userGroups'=>array(
                     'accessCode'=>'@!pellada',
-                    'salt'=>'',
+                    'salt'=>"",
                 ),
             
 		'gii'=>array(

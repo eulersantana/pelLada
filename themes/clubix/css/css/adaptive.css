@@ -1110,6 +1110,22 @@
         float: none !important;
     }
     .grid_user_info ul.features-01 li .f_image{width: 70% !important;}
+    .desktop-img, 
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        float: left;
+    }
+    .container-12{
+        width: 98% !important;
+    }
+    
+    .side-left,
+    .side-right{
+        width: 98% !important;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {

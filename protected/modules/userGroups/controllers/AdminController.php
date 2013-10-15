@@ -73,8 +73,8 @@ class AdminController extends Controller
 		$groupModel->unsetAttributes();
 		$userModel = new UserGroupsUser('search');
 		$userModel->unsetAttributes();
-
-		// load the filtering data to the group model
+                
+                // load the filtering data to the group model
 		if(isset($_GET['UserGroupsGroup']))
 			$groupModel->attributes=$_GET['UserGroupsGroup'];
 		// load the filtering data to the user model
@@ -99,7 +99,7 @@ class AdminController extends Controller
 
 		if (isset($_POST['UserGroupsAccess']) && isset($_POST['UserGroupsAccess']['delete']))
 			$this->itemDelete($_POST['UserGroupsAccess']);
-
+                
 		// checks if the page was loaded as ajax
 		if (Yii::app()->request->isAjaxRequest)
 			$this->renderPartial('index', array('confDataProvider'=>$confDataProvider, 'cronDataProvider'=>$cronDataProvider, 'groupModel' => $groupModel, 'userModel' => $userModel), false, true);

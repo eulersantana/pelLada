@@ -5,11 +5,12 @@ $this->pageTitle=Yii::app()->name . ' - Registro';
     <h1>Registro</h1>
 
     <?php if(Yii::app()->user->hasFlash('registro')): ?>
-
-    <div class="flash-success">
-        <?php echo Yii::app()->user->getFlash('registro'); ?>
+    <div class=" bg-page-bar">
+        <div class="page-bar">
+            <h1 class="title-page"><?php echo Yii::app()->user->getFlash('registro'); ?></h1>
+            <div class="clear"></div>
+        </div>
     </div>
-
     <?php else: ?>
 
     <p>
@@ -50,7 +51,7 @@ $this->pageTitle=Yii::app()->name . ' - Registro';
             </div>
             
             <div class="row buttons">
-                <?php echo CHtml::submitButton('Submit'); ?>
+                <?php echo CHtml::submitButton('Cadastrar-se'); ?>
             </div>
 
     <?php $this->endWidget(); ?>

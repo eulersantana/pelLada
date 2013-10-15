@@ -30,7 +30,7 @@ class Perfil extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome, rg, telefone, nascimento, usergroups_user_id', 'required'),
+			array('nome, usergroups_user_id', 'required'),
 			array('nome, imagem', 'length', 'max'=>255),
 			array('rg, telefone, nascimento', 'length', 'max'=>45),
 			array('usergroups_user_id', 'length', 'max'=>20),

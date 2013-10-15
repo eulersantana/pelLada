@@ -294,3 +294,14 @@ form.formulario input[type=submit]{border:none;background:#8e44ad;cursor:pointer
 .container-contact-page .info-post{padding-bottom:20px;float:left;width:580px;border-bottom:1px solid #3a3a3a;margin-bottom:20px;}.container-contact-page .info-post ul li{margin-right:20px;float:left;}.container-contact-page .info-post ul li img{position:absolute;}
 .container-contact-page .info-post ul li p{margin-left:20px;font-size:12px;color:#a1a1a1;line-height:18px;}.container-contact-page .info-post ul li p.email-contact{margin-left:32px;}
 .formulario-contact input[type=text],.formulario-contact input[type=email]{width:268px !important;}
+
+.bg-bar{
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    min-height: 30px;
+    line-height: 30px;
+    margin-top: 0px;
+}
+.bg-bar.page-bar-single-pages{width:980px;}
+.bg-bar .page-bar h1.title-page{float:left;text-transform:uppercase;color:#fff;font-size:24px;font-weight:200;}
+.bg-bar .page-bar span{font-size:12px;color:#ededed;}.bg-bar .page-bar span a{color:#ededed;}

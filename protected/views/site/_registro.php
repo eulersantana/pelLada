@@ -5,7 +5,7 @@ $this->pageTitle=Yii::app()->name . ' - Registro';
     <div class="p1">
         
         <div class="left side-left desktop-img">
-            <?php echo CHtml::image(Yii::app()->theme->baseUrl."/img/teste.jpg"," ",array()); ?>
+            <?php echo CHtml::image(Yii::app()->theme->baseUrl."/img/festas.jpg"," ",array()); ?>
         </div>
         <div class="right side-right mobile">
             <?php if(Yii::app()->user->hasFlash('erro')): ?>

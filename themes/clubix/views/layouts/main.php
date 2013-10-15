@@ -362,7 +362,7 @@
                 <div class="grid_5 push_6 omega social-cr">
                     
                     <div class="cr-section">
-                        <p>Copyright 2012 <a href="index.html">TriBalda</a> <span class="sep-cr">|</span>Feitor por<a href="http://develops6.com/">MAHDE - Develops</a></p>
+                        <p>&COPY; Copyright 2013 TriBalada <span class="sep-cr">|</span>Desenvolvido por <a href="http://www.develops6.com/">MAHDE - Develops</a></p>
                     </div>
                 </div>
             </div>

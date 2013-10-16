@@ -22,7 +22,7 @@ if(!Yii::app()->user->isGuest){
 ?>
 <div class="clear"></div>
 <?php 
-        $this->renderPartial("_mensagem");
+        $this->renderPartial("_registro",array("model_user"=>$model_user,"model_perfil"=>$model_perfil));
 
       }
 ?>

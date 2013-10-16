@@ -30,9 +30,28 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+            $model_usergroups_user = new UserGroupsUser;
+            $model_perfil = new Perfil;
+            if(isset($_POST['UserGroupsUser']))
+            {
+                $model_usergroups_user->attributes = $_POST['UserGroupsUser'];
+                $model_perfil->attributes = $_POST['Perfil'];
+                $model_usergroups_user->status = 4;
+                $model_usergroups_user->home = "/site";
+                $grupo = UserGroupsGroup::model()->find("groupname = 'user'");
+                $model_usergroups_user->group_id = $grupo->id;
+                $model_usergroups_user->username = $model_usergroups_user->email;
+                if($model_usergroups_user->save()){
+                    $model_perfil->usergroups_user_id = $model_usergroups_user->id;
+                    $model_perfil->save();
+                    Yii::app()->user->setFlash("registro","Registro feito com sucesso.");
+                    $this->redirect(Yii::app()->baseUrl."/userGroups");
+                }
+                else{
+                    Yii::app()->user->setFlash("erro","Não foi possível fazer o registro.");
+                }
+            }
+            $this->render('index',array('model_user'=>$model_usergroups_user,"model_perfil"=>$model_perfil));
 	}
 
 	/**

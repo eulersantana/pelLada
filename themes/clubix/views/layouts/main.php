@@ -28,6 +28,8 @@
 
         <!-- Styles and JavaScript-->
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.js'); ?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/owl-carousel/owl.carousel.js'); ?>
+        
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/component.js'); ?>
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/application.js'); ?>
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/easy-filter.js'); ?>
@@ -35,12 +37,18 @@
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/accordion-tab.js'); ?>
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/tabbed-interface.js'); ?>
         <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/prettyPhoto/css/prettyPhoto.css'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/owl-carousel/owl.theme.css'); ?>
+        <?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/owl-carousel/owl.carousel.css'); ?>
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/prettyPhoto/js/jquery.prettyPhoto.js'); ?>
         <script type="text/javascript">
             $(document).ready(function() {
                 Application.init();
                 Component.Init();
                 EasyFiler.Init();
+            });
+            $(document).ready(function() { 
+                $("#owl-example").owlCarousel();
+                navigation = true;
             });
         </script> 
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/rs-plugin/js/jquery.themepunch.revolution.min.js'); ?>

@@ -1,6 +1,3 @@
-<?php
-$this->pageTitle=Yii::app()->name . ' - Registro';
-?>
 <div class="registro container_12">
     <div class="p1">
         

@@ -1134,4 +1134,19 @@
         float: none !important;
     }
     .grid_user_info ul.features-01 li .f_image{width: 100% !important;}
+    
+    .registro .buttons input[type="submit"],
+    .registro .buttons .left,
+    .registro .buttons .right{
+        float: none;
+        width: 100%;
+    }
+    
+    .registro .buttons .input{
+        text-align: center;
+    }
+    
+    .registro .p1 .right input[type="text"] {
+        width: 85% !important;
+    }
 }

@@ -11,6 +11,7 @@
  * @property string $nascimento
  * @property string $usergroups_user_id
  * @property string $imagem
+ * @property string $sexo
  */
 class Perfil extends CActiveRecord
 {
@@ -30,13 +31,13 @@ class Perfil extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome, usergroups_user_id', 'required'),
+			array('nome, rg, telefone, nascimento, usergroups_user_id, sexo', 'required'),
 			array('nome, imagem', 'length', 'max'=>255),
-			array('rg, telefone, nascimento', 'length', 'max'=>45),
+			array('rg, telefone, nascimento, sexo', 'length', 'max'=>45),
 			array('usergroups_user_id', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nome, rg, telefone, nascimento, usergroups_user_id, imagem', 'safe', 'on'=>'search'),
+			array('id, nome, rg, telefone, nascimento, usergroups_user_id, imagem, sexo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,7 @@ class Perfil extends CActiveRecord
 			'nascimento' => 'Nascimento',
 			'usergroups_user_id' => 'Usergroups User',
 			'imagem' => 'Imagem',
+			'sexo' => 'Sexo',
 		);
 	}
 
@@ -92,6 +94,7 @@ class Perfil extends CActiveRecord
 		$criteria->compare('nascimento',$this->nascimento,true);
 		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
 		$criteria->compare('imagem',$this->imagem,true);
+		$criteria->compare('sexo',$this->sexo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

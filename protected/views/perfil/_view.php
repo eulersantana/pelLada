@@ -33,5 +33,11 @@
 	<?php echo CHtml::encode($data->imagem); ?>
 	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('sexo')); ?>:</b>
+	<?php echo CHtml::encode($data->sexo); ?>
+	<br />
+
+	*/ ?>
 
 </div>

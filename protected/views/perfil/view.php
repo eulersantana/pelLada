@@ -28,5 +28,6 @@ $this->menu=array(
 		'nascimento',
 		'usergroups_user_id',
 		'imagem',
+		'sexo',
 	),
 )); ?>

@@ -284,7 +284,7 @@
                             <li>
                                 <?php echo CHtml::link("Logout", Yii::app()->baseUrl . "/userGroups/user/logout", array()); ?>
                             </li>
-                        <?
+                        <?php
                         }
                         ?>
                         <li>
@@ -316,48 +316,7 @@
         <div class="container-footer-top template-based-element-border-color">
             <div class="container_12">
                 <ul class="footer-top-itm">
-<!--                    <li class="grid_3">
-                        <a class="logo-footer" href="index.html">
-                            <?php // echo CHtml::image(Yii::app()->theme->baseUrl . '/img/logo.png', "Logo " . Yii::app()->name) ?>
-                        </a>
-                        <p class="italic">Lorem ipsum ex vix illud nonummy, novum tation et
-                            his. At vix scriptaset patrioque scribentur, at pro fugit erts</p>
-                        <p class="italic">Srterem molestiae, sed et vivendo ali Lorem ipsum
-                            ex vix illud nonummy, novum tation et his. At vix scripta</p>
-                    </li>-->
-<!--                    <li class="grid_3">
-                        <h1 class="footer-top-title">Recent Posts</h1>
-                        <ul class="recent-post-footer">
-                            <li>
-                                <a class="template-based-element-color-hover" href="blog-page-single.html">Voluptas Sadips Ipsums Dolors</a>
-                            </li>
-                            <li>
-                                <a class="template-based-element-color-hover" href="blog-page-single.html-2">Fugiats Litora Ultrices Ante</a>
-                            </li>
-                            <li>
-                                <a class="template-based-element-color-hover" href="blog-page-single.html-3">Sapien Litora Dolores Ultrices</a>
-                            </li>
-                            <li>
-                                <a class="template-based-element-color-hover" href="blog-page-single.html-4">Nemis Fugiats Voluptas Dolores</a>
-                            </li>
-                        </ul>
-                    </li>-->
-<!--                    <li class="grid_3">
-                        <h1 class="footer-top-title">twitter</h1>
-                        <ul class="twitter-footer-top">
-                            <li>
-                                <p class="italic"><span>@ dratio</span> Metus, id placerat justo
-                                    sagittis id.</p>
-                            </li>
-                            <li>
-                                <p class="italic"><span>@ buris</span> Curabitur ultrices
-                                    sollicitudin metus, id placerat justo sagittis id... risus auctor
-                                    congue ac et risus.</p>
-                            </li>
-                        </ul>
-                    </li>-->
                     <li class="grid_3">
-
                     </li>
                 </ul>
             </div>

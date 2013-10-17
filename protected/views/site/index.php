@@ -21,11 +21,13 @@ if(!Yii::app()->user->isGuest){
       }else{
 ?>
 <div class="clear"></div>
-<?php 
-        $this->renderPartial("_registro",array("model_user"=>$model_user,"model_perfil"=>$model_perfil));
+<div id="boxRegistro">
+    <?php 
+            $this->renderPartial("_registro",array("model_user"=>$model_user,"model_perfil"=>$model_perfil));
 
-      }
-?>
+          }
+    ?>
+</div>
 
 <div class="clear"></div>
 <?php 

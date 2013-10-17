@@ -154,6 +154,6 @@ class SiteController extends Controller
                     Yii::app()->user->setFlash("erro","Não foi possível fazer o registro.");
                 }
             }
-            $this->render('registro',array('model_user'=>$model_usergroups_user,"model_perfil"=>$model_perfil));
+            $this->render('_registro',array('model_user'=>$model_usergroups_user,"model_perfil"=>$model_perfil));
         }
 }

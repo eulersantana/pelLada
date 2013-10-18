@@ -22,9 +22,6 @@
                         'validateOnSubmit'=>true,
                     ),
             )); ?>
-
-                    <p class="comentario">Os campos com <span class="required">*</span> são obrigatórios.</p>
-
                     <?php echo $form->errorSummary($model_user); ?>
 
                     <div class="row">

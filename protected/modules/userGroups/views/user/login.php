@@ -1,12 +1,14 @@
+
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',        
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-        'htmlOptions'=>array('class'=>'login')
+        'htmlOptions'=>array('class'=>'formulario')
 )); ?>
-    <div class="loginpanel">
+<div class="loginpanel">
+    
         <?php if(Yii::app()->user->hasFlash('registro')): ?>
         <div class="bg-bar">
             <div class="page-bar">
@@ -26,9 +28,7 @@
         </div>
         <div class="buttons">
              <?php echo CHtml::submitButton('Logar'); ?>
-             <span>
-                <?php echo CHtml::link("Registre-se", Yii::app()->baseUrl."/site/registro", array("class"=>"entypo-user-add register")); ?>
-             </span>
+             
         </div>
         <div class="hr">
             <div></div>

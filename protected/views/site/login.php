@@ -45,16 +45,14 @@ $this->breadcrumbs=array(
 			</div>
 
 			<!-- <div class="txt">
-				<?php echo $form->checkBox($model,'rememberMe'); ?>
-				<?php echo $form->label($model,'rememberMe'); ?>
-				<?php echo $form->error($model,'rememberMe'); ?>
+				<?php // echo $form->checkBox($model,'rememberMe'); ?>
+				<?php // echo $form->label($model,'rememberMe'); ?>
+				<?php // echo $form->error($model,'rememberMe'); ?>
 			</div> -->
 
-			<div class="buttons">
+			<div class="comment-form-inputs">
 				<?php echo CHtml::submitButton('Login'); ?>
-				<span>
-                    <a href="javascript:void(0)" class="entypo-user-add register">Registre-se</a>
-                </span>
+			
 			</div>
 	    	<div class="hr">
                 <div></div>
